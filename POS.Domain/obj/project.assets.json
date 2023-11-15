@@ -3139,11 +3139,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Projects-2023\\Dot Net\\NonCSDAPI\\POS.Domain\\POS.Domain.csproj",
+      "projectUniqueName": "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.Domain\\POS.Domain.csproj",
       "projectName": "POS.Domain",
-      "projectPath": "D:\\Projects-2023\\Dot Net\\NonCSDAPI\\POS.Domain\\POS.Domain.csproj",
+      "projectPath": "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.Domain\\POS.Domain.csproj",
       "packagesPath": "C:\\Users\\chandan.mandal\\.nuget\\packages\\",
-      "outputPath": "D:\\Projects-2023\\Dot Net\\NonCSDAPI\\POS.Domain\\obj\\",
+      "outputPath": "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -3165,8 +3165,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "D:\\Projects-2023\\Dot Net\\NonCSDAPI\\POS.Data\\POS.Data.csproj": {
-              "projectPath": "D:\\Projects-2023\\Dot Net\\NonCSDAPI\\POS.Data\\POS.Data.csproj"
+            "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.Data\\POS.Data.csproj": {
+              "projectPath": "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.Data\\POS.Data.csproj"
             }
           }
         }

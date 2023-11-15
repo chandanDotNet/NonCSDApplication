@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Projects-2023\\Dot Net\\NonCSDAPI\\POS.API\\POS.API.csproj": {}
+    "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.API\\POS.API.csproj": {}
   },
   "projects": {
-    "D:\\Projects-2023\\Dot Net\\NonCSDAPI\\POS.API\\POS.API.csproj": {
+    "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.API\\POS.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects-2023\\Dot Net\\NonCSDAPI\\POS.API\\POS.API.csproj",
+        "projectUniqueName": "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.API\\POS.API.csproj",
         "projectName": "POS.API",
-        "projectPath": "D:\\Projects-2023\\Dot Net\\NonCSDAPI\\POS.API\\POS.API.csproj",
+        "projectPath": "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.API\\POS.API.csproj",
         "packagesPath": "C:\\Users\\chandan.mandal\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects-2023\\Dot Net\\NonCSDAPI\\POS.API\\obj\\",
+        "outputPath": "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -34,20 +34,20 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "D:\\Projects-2023\\Dot Net\\NonCSDAPI\\POS.Common\\POS.Common.csproj": {
-                "projectPath": "D:\\Projects-2023\\Dot Net\\NonCSDAPI\\POS.Common\\POS.Common.csproj"
+              "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.Common\\POS.Common.csproj": {
+                "projectPath": "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.Common\\POS.Common.csproj"
               },
-              "D:\\Projects-2023\\Dot Net\\NonCSDAPI\\POS.Data\\POS.Data.csproj": {
-                "projectPath": "D:\\Projects-2023\\Dot Net\\NonCSDAPI\\POS.Data\\POS.Data.csproj"
+              "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.Data\\POS.Data.csproj": {
+                "projectPath": "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.Data\\POS.Data.csproj"
               },
-              "D:\\Projects-2023\\Dot Net\\NonCSDAPI\\POS.Domain\\POS.Domain.csproj": {
-                "projectPath": "D:\\Projects-2023\\Dot Net\\NonCSDAPI\\POS.Domain\\POS.Domain.csproj"
+              "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.Domain\\POS.Domain.csproj": {
+                "projectPath": "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.Domain\\POS.Domain.csproj"
               },
-              "D:\\Projects-2023\\Dot Net\\NonCSDAPI\\POS.Helper\\POS.Helper.csproj": {
-                "projectPath": "D:\\Projects-2023\\Dot Net\\NonCSDAPI\\POS.Helper\\POS.Helper.csproj"
+              "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.Helper\\POS.Helper.csproj": {
+                "projectPath": "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.Helper\\POS.Helper.csproj"
               },
-              "D:\\Projects-2023\\Dot Net\\NonCSDAPI\\POS.MediatR\\POS.MediatR.csproj": {
-                "projectPath": "D:\\Projects-2023\\Dot Net\\NonCSDAPI\\POS.MediatR\\POS.MediatR.csproj"
+              "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.MediatR\\POS.MediatR.csproj": {
+                "projectPath": "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.MediatR\\POS.MediatR.csproj"
               }
             }
           }
@@ -168,14 +168,14 @@
         }
       }
     },
-    "D:\\Projects-2023\\Dot Net\\NonCSDAPI\\POS.Common\\POS.Common.csproj": {
+    "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.Common\\POS.Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects-2023\\Dot Net\\NonCSDAPI\\POS.Common\\POS.Common.csproj",
+        "projectUniqueName": "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.Common\\POS.Common.csproj",
         "projectName": "POS.Common",
-        "projectPath": "D:\\Projects-2023\\Dot Net\\NonCSDAPI\\POS.Common\\POS.Common.csproj",
+        "projectPath": "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.Common\\POS.Common.csproj",
         "packagesPath": "C:\\Users\\chandan.mandal\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects-2023\\Dot Net\\NonCSDAPI\\POS.Common\\obj\\",
+        "outputPath": "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.Common\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -197,8 +197,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "D:\\Projects-2023\\Dot Net\\NonCSDAPI\\POS.Data\\POS.Data.csproj": {
-                "projectPath": "D:\\Projects-2023\\Dot Net\\NonCSDAPI\\POS.Data\\POS.Data.csproj"
+              "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.Data\\POS.Data.csproj": {
+                "projectPath": "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.Data\\POS.Data.csproj"
               }
             }
           }
@@ -238,14 +238,14 @@
         }
       }
     },
-    "D:\\Projects-2023\\Dot Net\\NonCSDAPI\\POS.Data\\POS.Data.csproj": {
+    "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.Data\\POS.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects-2023\\Dot Net\\NonCSDAPI\\POS.Data\\POS.Data.csproj",
+        "projectUniqueName": "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.Data\\POS.Data.csproj",
         "projectName": "POS.Data",
-        "projectPath": "D:\\Projects-2023\\Dot Net\\NonCSDAPI\\POS.Data\\POS.Data.csproj",
+        "projectPath": "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.Data\\POS.Data.csproj",
         "packagesPath": "C:\\Users\\chandan.mandal\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects-2023\\Dot Net\\NonCSDAPI\\POS.Data\\obj\\",
+        "outputPath": "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -267,8 +267,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "D:\\Projects-2023\\Dot Net\\NonCSDAPI\\POS.Helper\\POS.Helper.csproj": {
-                "projectPath": "D:\\Projects-2023\\Dot Net\\NonCSDAPI\\POS.Helper\\POS.Helper.csproj"
+              "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.Helper\\POS.Helper.csproj": {
+                "projectPath": "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.Helper\\POS.Helper.csproj"
               }
             }
           }
@@ -308,14 +308,14 @@
         }
       }
     },
-    "D:\\Projects-2023\\Dot Net\\NonCSDAPI\\POS.Domain\\POS.Domain.csproj": {
+    "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.Domain\\POS.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects-2023\\Dot Net\\NonCSDAPI\\POS.Domain\\POS.Domain.csproj",
+        "projectUniqueName": "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.Domain\\POS.Domain.csproj",
         "projectName": "POS.Domain",
-        "projectPath": "D:\\Projects-2023\\Dot Net\\NonCSDAPI\\POS.Domain\\POS.Domain.csproj",
+        "projectPath": "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.Domain\\POS.Domain.csproj",
         "packagesPath": "C:\\Users\\chandan.mandal\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects-2023\\Dot Net\\NonCSDAPI\\POS.Domain\\obj\\",
+        "outputPath": "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -337,8 +337,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "D:\\Projects-2023\\Dot Net\\NonCSDAPI\\POS.Data\\POS.Data.csproj": {
-                "projectPath": "D:\\Projects-2023\\Dot Net\\NonCSDAPI\\POS.Data\\POS.Data.csproj"
+              "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.Data\\POS.Data.csproj": {
+                "projectPath": "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.Data\\POS.Data.csproj"
               }
             }
           }
@@ -390,14 +390,14 @@
         }
       }
     },
-    "D:\\Projects-2023\\Dot Net\\NonCSDAPI\\POS.Helper\\POS.Helper.csproj": {
+    "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.Helper\\POS.Helper.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects-2023\\Dot Net\\NonCSDAPI\\POS.Helper\\POS.Helper.csproj",
+        "projectUniqueName": "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.Helper\\POS.Helper.csproj",
         "projectName": "POS.Helper",
-        "projectPath": "D:\\Projects-2023\\Dot Net\\NonCSDAPI\\POS.Helper\\POS.Helper.csproj",
+        "projectPath": "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.Helper\\POS.Helper.csproj",
         "packagesPath": "C:\\Users\\chandan.mandal\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects-2023\\Dot Net\\NonCSDAPI\\POS.Helper\\obj\\",
+        "outputPath": "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.Helper\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -467,14 +467,14 @@
         }
       }
     },
-    "D:\\Projects-2023\\Dot Net\\NonCSDAPI\\POS.MediatR\\POS.MediatR.csproj": {
+    "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.MediatR\\POS.MediatR.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects-2023\\Dot Net\\NonCSDAPI\\POS.MediatR\\POS.MediatR.csproj",
+        "projectUniqueName": "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.MediatR\\POS.MediatR.csproj",
         "projectName": "POS.MediatR",
-        "projectPath": "D:\\Projects-2023\\Dot Net\\NonCSDAPI\\POS.MediatR\\POS.MediatR.csproj",
+        "projectPath": "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.MediatR\\POS.MediatR.csproj",
         "packagesPath": "C:\\Users\\chandan.mandal\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects-2023\\Dot Net\\NonCSDAPI\\POS.MediatR\\obj\\",
+        "outputPath": "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.MediatR\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -496,20 +496,20 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "D:\\Projects-2023\\Dot Net\\NonCSDAPI\\POS.Common\\POS.Common.csproj": {
-                "projectPath": "D:\\Projects-2023\\Dot Net\\NonCSDAPI\\POS.Common\\POS.Common.csproj"
+              "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.Common\\POS.Common.csproj": {
+                "projectPath": "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.Common\\POS.Common.csproj"
               },
-              "D:\\Projects-2023\\Dot Net\\NonCSDAPI\\POS.Data\\POS.Data.csproj": {
-                "projectPath": "D:\\Projects-2023\\Dot Net\\NonCSDAPI\\POS.Data\\POS.Data.csproj"
+              "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.Data\\POS.Data.csproj": {
+                "projectPath": "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.Data\\POS.Data.csproj"
               },
-              "D:\\Projects-2023\\Dot Net\\NonCSDAPI\\POS.Domain\\POS.Domain.csproj": {
-                "projectPath": "D:\\Projects-2023\\Dot Net\\NonCSDAPI\\POS.Domain\\POS.Domain.csproj"
+              "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.Domain\\POS.Domain.csproj": {
+                "projectPath": "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.Domain\\POS.Domain.csproj"
               },
-              "D:\\Projects-2023\\Dot Net\\NonCSDAPI\\POS.Helper\\POS.Helper.csproj": {
-                "projectPath": "D:\\Projects-2023\\Dot Net\\NonCSDAPI\\POS.Helper\\POS.Helper.csproj"
+              "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.Helper\\POS.Helper.csproj": {
+                "projectPath": "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.Helper\\POS.Helper.csproj"
               },
-              "D:\\Projects-2023\\Dot Net\\NonCSDAPI\\POS.Repository\\POS.Repository.csproj": {
-                "projectPath": "D:\\Projects-2023\\Dot Net\\NonCSDAPI\\POS.Repository\\POS.Repository.csproj"
+              "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.Repository\\POS.Repository.csproj": {
+                "projectPath": "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.Repository\\POS.Repository.csproj"
               }
             }
           }
@@ -568,14 +568,14 @@
         }
       }
     },
-    "D:\\Projects-2023\\Dot Net\\NonCSDAPI\\POS.Repository\\POS.Repository.csproj": {
+    "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.Repository\\POS.Repository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects-2023\\Dot Net\\NonCSDAPI\\POS.Repository\\POS.Repository.csproj",
+        "projectUniqueName": "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.Repository\\POS.Repository.csproj",
         "projectName": "POS.Repository",
-        "projectPath": "D:\\Projects-2023\\Dot Net\\NonCSDAPI\\POS.Repository\\POS.Repository.csproj",
+        "projectPath": "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.Repository\\POS.Repository.csproj",
         "packagesPath": "C:\\Users\\chandan.mandal\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects-2023\\Dot Net\\NonCSDAPI\\POS.Repository\\obj\\",
+        "outputPath": "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.Repository\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -597,17 +597,17 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "D:\\Projects-2023\\Dot Net\\NonCSDAPI\\POS.Common\\POS.Common.csproj": {
-                "projectPath": "D:\\Projects-2023\\Dot Net\\NonCSDAPI\\POS.Common\\POS.Common.csproj"
+              "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.Common\\POS.Common.csproj": {
+                "projectPath": "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.Common\\POS.Common.csproj"
               },
-              "D:\\Projects-2023\\Dot Net\\NonCSDAPI\\POS.Data\\POS.Data.csproj": {
-                "projectPath": "D:\\Projects-2023\\Dot Net\\NonCSDAPI\\POS.Data\\POS.Data.csproj"
+              "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.Data\\POS.Data.csproj": {
+                "projectPath": "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.Data\\POS.Data.csproj"
               },
-              "D:\\Projects-2023\\Dot Net\\NonCSDAPI\\POS.Domain\\POS.Domain.csproj": {
-                "projectPath": "D:\\Projects-2023\\Dot Net\\NonCSDAPI\\POS.Domain\\POS.Domain.csproj"
+              "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.Domain\\POS.Domain.csproj": {
+                "projectPath": "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.Domain\\POS.Domain.csproj"
               },
-              "D:\\Projects-2023\\Dot Net\\NonCSDAPI\\POS.Helper\\POS.Helper.csproj": {
-                "projectPath": "D:\\Projects-2023\\Dot Net\\NonCSDAPI\\POS.Helper\\POS.Helper.csproj"
+              "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.Helper\\POS.Helper.csproj": {
+                "projectPath": "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.Helper\\POS.Helper.csproj"
               }
             }
           }
