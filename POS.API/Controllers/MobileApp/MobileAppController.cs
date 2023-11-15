@@ -310,8 +310,6 @@ namespace POS.API.Controllers.MobileApp
             }
             return Ok(response);
         }
-
-
-
+        //Rahil
     }
 }
