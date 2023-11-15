@@ -62,4 +62,18 @@ namespace POS.Data.Entities
         public string message { get; set; }
         public IList<ProductCategoryDto> Data { get; set; }
     }
+    public class CustomerAddressListResponseData
+    {
+        public bool status { get; set; }
+        public int StatusCode { get; set; }
+        public string message { get; set; }
+        public IList<CustomerAddressDto> Data { get; set; }
+    }
+    public class CustomerAddressResponseData
+    {
+        public bool status { get; set; }
+        public int StatusCode { get; set; }
+        public string message { get; set; }
+        public CustomerAddressDto Data { get; set; }
+    }
 }

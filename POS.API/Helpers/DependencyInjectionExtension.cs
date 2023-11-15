@@ -71,6 +71,7 @@ namespace POS.API.Helpers
             services.AddScoped<IInventoryHistoryRepository, InventoryHistoryRepository>();
             services.AddScoped<IUnitConversationRepository, UnitConversationRepository>();
             services.AddScoped<IWarehouseInventoryRepository, WarehouseInventoryRepository>();
+            services.AddScoped<ICustomerAddressRepository, CustomerAddressRepository>();
 
         }
     }

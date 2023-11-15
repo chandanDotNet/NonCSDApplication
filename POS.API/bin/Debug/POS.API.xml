@@ -842,6 +842,27 @@
             <param name="getAllProductCategoriesQuery"></param>
             <returns></returns>
         </member>
+        <member name="M:POS.API.Controllers.MobileApp.MobileAppController.AddCustomerAddress(POS.MediatR.CustomerAddress.Commands.AddCustomerAddressCommand)">
+            <summary>
+            Create Customer Address.
+            </summary>
+            <param name="addCustomerAddressCommand"></param>
+            <returns></returns>
+        </member>
+        <member name="M:POS.API.Controllers.MobileApp.MobileAppController.GetCustomerAddress(System.Guid)">
+            <summary>
+            Get Customer Address.
+            </summary>
+            <param name="customerId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:POS.API.Controllers.MobileApp.MobileAppController.GetCustomerAddresses(POS.Data.Resources.CustomerAddressResource)">
+            <summary>
+            Get Customer Addresses
+            </summary>
+            <param name="customerAddressResource"></param>
+            <returns></returns>
+        </member>
         <member name="M:POS.API.Controllers.NewsletterSubscriber.NewsletterSubscriberController.CreateNewsletterSubscriber(POS.MediatR.CommandAndQuery.AddNewsletterSubscriberCommand)">
             <summary>
             Creates the newsletter subscriber.
