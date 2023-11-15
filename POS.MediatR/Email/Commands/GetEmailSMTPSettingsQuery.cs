@@ -1,0 +1,10 @@
+﻿using MediatR;
+using System.Collections.Generic;
+using POS.Data.Dto;
+
+namespace POS.MediatR.CommandAndQuery
+{
+    public class GetEmailSMTPSettingsQuery : IRequest<List<EmailSMTPSettingDto>>
+    {
+    }
+}

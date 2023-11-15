@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "Hash": "mcTsKbLwF1SnX1QCpfKVaGlBOGVZVkPXw97IZHMs174=",
+  "Source": "POS.API",
+  "BasePath": "_content/POS.API",
+  "Mode": "Default",
+  "ManifestType": "Publish",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "POS.API\\wwwroot",
+      "Source": "POS.API",
+      "ContentRoot": "D:\\Projects-2023\\Dot Net\\NonCSDAPI\\POS.API\\wwwroot\\",
+      "BasePath": "_content/POS.API",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "D:\\Projects-2023\\Dot Net\\NonCSDAPI\\POS.API\\wwwroot\\Users\\no-image-found.png",
+      "SourceId": "POS.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Projects-2023\\Dot Net\\NonCSDAPI\\POS.API\\wwwroot\\",
+      "BasePath": "_content/POS.API",
+      "RelativePath": "Users/no-image-found.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Users\\no-image-found.png"
+    }
+  ]
+}

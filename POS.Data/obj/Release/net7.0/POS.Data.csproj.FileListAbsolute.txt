@@ -1,0 +1,45 @@
+D:\Projects-2023\Project Details\New Project -POS\Main\SourceCode\DotnetCoreRESTApiSQLServerProvider\POS.Data\bin\Release\net7.0\POS.Data.deps.json
+D:\Projects-2023\Project Details\New Project -POS\Main\SourceCode\DotnetCoreRESTApiSQLServerProvider\POS.Data\bin\Release\net7.0\POS.Data.dll
+D:\Projects-2023\Project Details\New Project -POS\Main\SourceCode\DotnetCoreRESTApiSQLServerProvider\POS.Data\bin\Release\net7.0\POS.Data.pdb
+D:\Projects-2023\Project Details\New Project -POS\Main\SourceCode\DotnetCoreRESTApiSQLServerProvider\POS.Data\bin\Release\net7.0\POS.Helper.dll
+D:\Projects-2023\Project Details\New Project -POS\Main\SourceCode\DotnetCoreRESTApiSQLServerProvider\POS.Data\bin\Release\net7.0\POS.Helper.pdb
+D:\Projects-2023\Project Details\New Project -POS\Main\SourceCode\DotnetCoreRESTApiSQLServerProvider\POS.Data\obj\Release\net7.0\POS.Data.csproj.AssemblyReference.cache
+D:\Projects-2023\Project Details\New Project -POS\Main\SourceCode\DotnetCoreRESTApiSQLServerProvider\POS.Data\obj\Release\net7.0\POS.Data.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects-2023\Project Details\New Project -POS\Main\SourceCode\DotnetCoreRESTApiSQLServerProvider\POS.Data\obj\Release\net7.0\POS.Data.AssemblyInfoInputs.cache
+D:\Projects-2023\Project Details\New Project -POS\Main\SourceCode\DotnetCoreRESTApiSQLServerProvider\POS.Data\obj\Release\net7.0\POS.Data.AssemblyInfo.cs
+D:\Projects-2023\Project Details\New Project -POS\Main\SourceCode\DotnetCoreRESTApiSQLServerProvider\POS.Data\obj\Release\net7.0\POS.Data.csproj.CoreCompileInputs.cache
+D:\Projects-2023\Project Details\New Project -POS\Main\SourceCode\DotnetCoreRESTApiSQLServerProvider\POS.Data\obj\Release\net7.0\POS.Data.csproj.CopyComplete
+D:\Projects-2023\Project Details\New Project -POS\Main\SourceCode\DotnetCoreRESTApiSQLServerProvider\POS.Data\obj\Release\net7.0\POS.Data.dll
+D:\Projects-2023\Project Details\New Project -POS\Main\SourceCode\DotnetCoreRESTApiSQLServerProvider\POS.Data\obj\Release\net7.0\refint\POS.Data.dll
+D:\Projects-2023\Project Details\New Project -POS\Main\SourceCode\DotnetCoreRESTApiSQLServerProvider\POS.Data\obj\Release\net7.0\POS.Data.pdb
+D:\Projects-2023\Project Details\New Project -POS\Main\SourceCode\DotnetCoreRESTApiSQLServerProvider\POS.Data\obj\Release\net7.0\ref\POS.Data.dll
+D:\Projects-2023\Dot Net\NonCSDAPI\POS.Data\bin\Release\net7.0\POS.Data.deps.json
+D:\Projects-2023\Dot Net\NonCSDAPI\POS.Data\bin\Release\net7.0\POS.Data.dll
+D:\Projects-2023\Dot Net\NonCSDAPI\POS.Data\bin\Release\net7.0\POS.Data.pdb
+D:\Projects-2023\Dot Net\NonCSDAPI\POS.Data\bin\Release\net7.0\POS.Helper.dll
+D:\Projects-2023\Dot Net\NonCSDAPI\POS.Data\bin\Release\net7.0\POS.Helper.pdb
+D:\Projects-2023\Dot Net\NonCSDAPI\POS.Data\obj\Release\net7.0\POS.Data.csproj.AssemblyReference.cache
+D:\Projects-2023\Dot Net\NonCSDAPI\POS.Data\obj\Release\net7.0\POS.Data.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects-2023\Dot Net\NonCSDAPI\POS.Data\obj\Release\net7.0\POS.Data.AssemblyInfoInputs.cache
+D:\Projects-2023\Dot Net\NonCSDAPI\POS.Data\obj\Release\net7.0\POS.Data.AssemblyInfo.cs
+D:\Projects-2023\Dot Net\NonCSDAPI\POS.Data\obj\Release\net7.0\POS.Data.csproj.CoreCompileInputs.cache
+D:\Projects-2023\Dot Net\NonCSDAPI\POS.Data\obj\Release\net7.0\POS.Data.csproj.CopyComplete
+D:\Projects-2023\Dot Net\NonCSDAPI\POS.Data\obj\Release\net7.0\POS.Data.dll
+D:\Projects-2023\Dot Net\NonCSDAPI\POS.Data\obj\Release\net7.0\refint\POS.Data.dll
+D:\Projects-2023\Dot Net\NonCSDAPI\POS.Data\obj\Release\net7.0\POS.Data.pdb
+D:\Projects-2023\Dot Net\NonCSDAPI\POS.Data\obj\Release\net7.0\ref\POS.Data.dll
+D:\POS\Git_NONCSD_POS_API\API\POS.Data\bin\Release\net7.0\POS.Data.deps.json
+D:\POS\Git_NONCSD_POS_API\API\POS.Data\bin\Release\net7.0\POS.Data.dll
+D:\POS\Git_NONCSD_POS_API\API\POS.Data\bin\Release\net7.0\POS.Data.pdb
+D:\POS\Git_NONCSD_POS_API\API\POS.Data\bin\Release\net7.0\POS.Helper.dll
+D:\POS\Git_NONCSD_POS_API\API\POS.Data\bin\Release\net7.0\POS.Helper.pdb
+D:\POS\Git_NONCSD_POS_API\API\POS.Data\obj\Release\net7.0\POS.Data.csproj.AssemblyReference.cache
+D:\POS\Git_NONCSD_POS_API\API\POS.Data\obj\Release\net7.0\POS.Data.GeneratedMSBuildEditorConfig.editorconfig
+D:\POS\Git_NONCSD_POS_API\API\POS.Data\obj\Release\net7.0\POS.Data.AssemblyInfoInputs.cache
+D:\POS\Git_NONCSD_POS_API\API\POS.Data\obj\Release\net7.0\POS.Data.AssemblyInfo.cs
+D:\POS\Git_NONCSD_POS_API\API\POS.Data\obj\Release\net7.0\POS.Data.csproj.CoreCompileInputs.cache
+D:\POS\Git_NONCSD_POS_API\API\POS.Data\obj\Release\net7.0\POS.Data.csproj.CopyComplete
+D:\POS\Git_NONCSD_POS_API\API\POS.Data\obj\Release\net7.0\POS.Data.dll
+D:\POS\Git_NONCSD_POS_API\API\POS.Data\obj\Release\net7.0\refint\POS.Data.dll
+D:\POS\Git_NONCSD_POS_API\API\POS.Data\obj\Release\net7.0\POS.Data.pdb
+D:\POS\Git_NONCSD_POS_API\API\POS.Data\obj\Release\net7.0\ref\POS.Data.dll

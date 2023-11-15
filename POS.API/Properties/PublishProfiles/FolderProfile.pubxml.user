@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <_PublishTargetUrl>D:\pos\Main\SourceCode\DotnetCoreRESTApiSQLServerProvider\POS.API\bin\Release\net7.0\publish\</_PublishTargetUrl>
+    <History>True|2023-09-15T11:08:06.6950820Z;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+</Project>
