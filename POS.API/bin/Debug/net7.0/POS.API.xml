@@ -842,7 +842,6 @@
             <param name="getAllProductCategoriesQuery"></param>
             <returns></returns>
         </member>
-<<<<<<< HEAD
         <member name="M:POS.API.Controllers.MobileApp.MobileAppController.CreateCart(POS.MediatR.CommandAndQuery.AddCartCommand)">
             <summary>
             Creates the cart.
@@ -864,12 +863,6 @@
             <param name="cartResource"></param>
             <returns></returns>
         </member>
-        <member name="M:POS.API.Controllers.MobileApp.MobileAppController.DeleteCart(POS.MediatR.CommandAndQuery.DeleteCartCommand)">
-            <summary>
-            Delete Cart By Id
-            </summary>
-            <param name="deleteCartCommand">The delete cart command.</param>
-=======
         <member name="M:POS.API.Controllers.MobileApp.MobileAppController.AddCustomerAddress(POS.MediatR.CustomerAddress.Commands.AddCustomerAddressCommand)">
             <summary>
             Create Customer Address.
@@ -898,13 +891,19 @@
             <param name="Id"></param>
             <returns></returns>
         </member>
+        <member name="M:POS.API.Controllers.MobileApp.MobileAppController.DeleteCart(POS.MediatR.CommandAndQuery.DeleteCartCommand)">
+            <summary>
+            Delete Cart By Id
+            </summary>
+            <param name="deleteCartCommand">The delete cart command.</param>
+            <returns></returns>
+        </member>
         <member name="M:POS.API.Controllers.MobileApp.MobileAppController.UpdateCustomerAddress(System.Guid,POS.MediatR.CustomerAddress.Commands.UpdateCustomerAddressCommand)">
             <summary>
             Update Customer Address.
             </summary>
             <param name="Id"></param>
             <param name="updateCustomerAddressCommand"></param>
->>>>>>> 34fbf4f2fb1173f1fd23902968deddf67f22ab0e
             <returns></returns>
         </member>
         <member name="M:POS.API.Controllers.NewsletterSubscriber.NewsletterSubscriberController.CreateNewsletterSubscriber(POS.MediatR.CommandAndQuery.AddNewsletterSubscriberCommand)">

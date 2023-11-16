@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "/dMdFXNH/yvVsKek/iGCOCM7/0oKVccLQPmkinPJnEo=",
+  "Hash": "AhS9WVBt7eV9p/ZzN1ajnkBjD+Vb//TcsUG1FFTA3Uo=",
   "Source": "POS.API",
   "BasePath": "_content/POS.API",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "POS.API\\wwwroot",
       "Source": "POS.API",
-      "ContentRoot": "D:\\POS\\Git_NONCSD_POS_API\\Non CSD API - Chandan (Working)\\NonCSDApplication\\POS.API\\wwwroot\\",
+      "ContentRoot": "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.API\\wwwroot\\",
       "BasePath": "_content/POS.API",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "D:\\POS\\Git_NONCSD_POS_API\\Non CSD API - Chandan (Working)\\NonCSDApplication\\POS.API\\wwwroot\\Users\\no-image-found.png",
+      "Identity": "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.API\\wwwroot\\Users\\no-image-found.png",
       "SourceId": "POS.API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\POS\\Git_NONCSD_POS_API\\Non CSD API - Chandan (Working)\\NonCSDApplication\\POS.API\\wwwroot\\",
+      "ContentRoot": "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.API\\wwwroot\\",
       "BasePath": "_content/POS.API",
       "RelativePath": "Users/no-image-found.png",
       "AssetKind": "All",

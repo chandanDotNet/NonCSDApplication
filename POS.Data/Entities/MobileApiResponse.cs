@@ -97,3 +97,4 @@ namespace POS.Data.Entities
         public CustomerAddressDto Data { get; set; }
     }
 }
+
