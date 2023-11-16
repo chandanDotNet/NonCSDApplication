@@ -58,3 +58,23 @@ D:\POS\Git_NONCSD_POS_API\API\POS.Domain\obj\Release\net7.0\refint\POS.Domain.dl
 D:\POS\Git_NONCSD_POS_API\API\POS.Domain\obj\Release\net7.0\POS.Domain.pdb
 D:\POS\Git_NONCSD_POS_API\API\POS.Domain\obj\Release\net7.0\POS.Domain.genruntimeconfig.cache
 D:\POS\Git_NONCSD_POS_API\API\POS.Domain\obj\Release\net7.0\ref\POS.Domain.dll
+D:\Projects-2023\Dot Net\NonCSDApi2023\POS.Domain\bin\Release\net7.0\Migrations\20221105115351_Initial_Data.sql
+D:\Projects-2023\Dot Net\NonCSDApi2023\POS.Domain\bin\Release\net7.0\POS.Domain.deps.json
+D:\Projects-2023\Dot Net\NonCSDApi2023\POS.Domain\bin\Release\net7.0\POS.Domain.runtimeconfig.json
+D:\Projects-2023\Dot Net\NonCSDApi2023\POS.Domain\bin\Release\net7.0\POS.Domain.dll
+D:\Projects-2023\Dot Net\NonCSDApi2023\POS.Domain\bin\Release\net7.0\POS.Domain.pdb
+D:\Projects-2023\Dot Net\NonCSDApi2023\POS.Domain\bin\Release\net7.0\POS.Data.dll
+D:\Projects-2023\Dot Net\NonCSDApi2023\POS.Domain\bin\Release\net7.0\POS.Helper.dll
+D:\Projects-2023\Dot Net\NonCSDApi2023\POS.Domain\bin\Release\net7.0\POS.Data.pdb
+D:\Projects-2023\Dot Net\NonCSDApi2023\POS.Domain\bin\Release\net7.0\POS.Helper.pdb
+D:\Projects-2023\Dot Net\NonCSDApi2023\POS.Domain\obj\Release\net7.0\POS.Domain.csproj.AssemblyReference.cache
+D:\Projects-2023\Dot Net\NonCSDApi2023\POS.Domain\obj\Release\net7.0\POS.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects-2023\Dot Net\NonCSDApi2023\POS.Domain\obj\Release\net7.0\POS.Domain.AssemblyInfoInputs.cache
+D:\Projects-2023\Dot Net\NonCSDApi2023\POS.Domain\obj\Release\net7.0\POS.Domain.AssemblyInfo.cs
+D:\Projects-2023\Dot Net\NonCSDApi2023\POS.Domain\obj\Release\net7.0\POS.Domain.csproj.CoreCompileInputs.cache
+D:\Projects-2023\Dot Net\NonCSDApi2023\POS.Domain\obj\Release\net7.0\POS.Domain.csproj.CopyComplete
+D:\Projects-2023\Dot Net\NonCSDApi2023\POS.Domain\obj\Release\net7.0\POS.Domain.dll
+D:\Projects-2023\Dot Net\NonCSDApi2023\POS.Domain\obj\Release\net7.0\refint\POS.Domain.dll
+D:\Projects-2023\Dot Net\NonCSDApi2023\POS.Domain\obj\Release\net7.0\POS.Domain.pdb
+D:\Projects-2023\Dot Net\NonCSDApi2023\POS.Domain\obj\Release\net7.0\POS.Domain.genruntimeconfig.cache
+D:\Projects-2023\Dot Net\NonCSDApi2023\POS.Domain\obj\Release\net7.0\ref\POS.Domain.dll

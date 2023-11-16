@@ -21,6 +21,7 @@ using POS.Data.Resources;
 using POS.MediatR.Product.Command;
 using POS.MediatR.CustomerAddress.Commands;
 using POS.MediatR.Country.Commands;
+using POS.MediatR.Cart;
 
 namespace POS.API.Controllers.MobileApp
 {
@@ -37,10 +38,9 @@ namespace POS.API.Controllers.MobileApp
         }
 
 
-        //
+       
         /// <summary>
-        /// Login customers.
-        /// 
+        /// Login customers.       
         /// </summary>
         /// <param name="customerResource">The customer resource.</param>
         /// <returns></returns>
@@ -72,6 +72,7 @@ namespace POS.API.Controllers.MobileApp
                 //*************************
 
                 //customersFromRepo.FirstOrDefault().OTP = 1234;
+
 
                 response.status = true;
                 response.StatusCode = 1;
@@ -175,7 +176,7 @@ namespace POS.API.Controllers.MobileApp
         /// </summary>
         /// <param name="productResource"></param>
         /// <returns></returns>
-        [HttpGet("GetProductsList")]
+        [HttpPost("GetProductsList")]
         public async Task<IActionResult> GetProductsList(ProductResource productResource)
         {
 
@@ -225,10 +226,9 @@ namespace POS.API.Controllers.MobileApp
 
         /// <summary>
         /// Get Product Details.
-        /// </summary>
-        /// <param name="id"></param>
+        /// </summary>       
         /// <returns></returns>
-        [HttpGet("GetProductDetails")]
+        [HttpPost("GetProductDetails")]
         [Produces("application/json", "application/xml", Type = typeof(ProductDto))]
         public async Task<IActionResult> GetProductDetails(ProductDetailsRequestData productRequestData)
         {
@@ -267,7 +267,7 @@ namespace POS.API.Controllers.MobileApp
                     response.status = false;
                     response.StatusCode = 0;
                     response.message = ex.Message;
-                    
+
                 }
             }
             return Ok(response);
@@ -302,6 +302,117 @@ namespace POS.API.Controllers.MobileApp
                     response.StatusCode = 0;
                     response.message = "Invalid";
                 }
+            }
+            catch (Exception ex)
+            {
+                response.status = false;
+                response.StatusCode = 0;
+                response.message = ex.Message;
+            }
+            return Ok(response);
+        }
+
+
+
+        /// <summary>
+        /// Creates the cart.
+        /// </summary>
+        /// <param name="addCartCommand">The add cart command.</param>
+        /// <returns></returns>
+        //[HttpPost, DisableRequestSizeLimit]
+        [HttpPost("AddToCart")]
+        public async Task<IActionResult> CreateCart([FromBody] AddCartCommand addCartCommand)
+        {
+            IUDResponseData response = new IUDResponseData();
+            var result = await _mediator.Send(addCartCommand);
+
+            if (result.Success)
+            {
+                response.status = true;
+                response.StatusCode = 1;
+                response.message = "Success";
+            }
+            else
+            {
+                response.status = false;
+                response.StatusCode = 0;
+                response.message = "Invalid";
+
+            }
+            return Ok(response);
+        }
+
+
+        /// <summary>
+        /// Updates the cart.
+        /// </summary>
+
+        /// <param name="updateCartCommand">The update cart command.</param>
+        /// <returns></returns>
+        [HttpPut("UpdateToCart")]
+        public async Task<IActionResult> UpdateCart([FromBody] UpdateCartCommand updateCartCommand)
+        {
+            IUDResponseData response = new IUDResponseData();
+            //updateCustomerCommand.Id = id;
+            var result = await _mediator.Send(updateCartCommand);
+            //return ReturnFormattedResponse(response);
+            if (result.Success)
+            {
+                response.status = true;
+                response.StatusCode = 1;
+                response.message = "Success";
+            }
+            else
+            {
+                response.status = false;
+                response.StatusCode = 0;
+                response.message = "Invalid";
+
+            }
+            return Ok(response);
+        }
+
+
+        /// <summary>
+        /// Get All Cart List.
+        /// </summary>
+        /// <param name="cartResource"></param>
+        /// <returns></returns>
+        [HttpPost("GetCartList")]
+        public async Task<IActionResult> GetCartList(CartResource cartResource)
+        {
+
+            CartListResponseData response = new CartListResponseData();
+
+            try
+            {
+                var query = new GetAllCartQuery
+                {
+                    CartResource = cartResource
+                };
+                var result = await _mediator.Send(query);
+
+                if (result.Count > 0)
+                {
+                    response.TotalCount = result.TotalCount;
+                    response.PageSize = result.PageSize;
+                    response.Skip = result.Skip;
+                    response.TotalPages = result.TotalPages;
+
+                    response.status = true;
+                    response.StatusCode = 1;
+                    response.message = "Success";
+                    response.Data = result;
+                }
+                else
+                {
+                    response.status = false;
+                    response.StatusCode = 0;
+                    response.message = "Invalid";
+                    response.Data = result;
+
+                }
+
             }
             catch (Exception ex)
             {
@@ -446,6 +557,45 @@ namespace POS.API.Controllers.MobileApp
             }
 
             return Ok(response);
+
+        }
+
+
+        /// <summary>
+        /// Delete Cart By Id
+        /// </summary>
+        /// <param name="deleteCartCommand">The delete cart command.</param>
+        /// <returns></returns>
+        [HttpDelete("DeleteToCart")]
+        public async Task<IActionResult> DeleteCart(DeleteCartCommand deleteCartCommand)
+        {
+            IUDResponseData response = new IUDResponseData();
+            if (deleteCartCommand.Id != null)
+            {
+                var command = new DeleteCartCommand { Id = deleteCartCommand.Id };
+                var result = await _mediator.Send(command);
+                if (result.Success)
+                {
+                    response.status = true;
+                    response.StatusCode = 1;
+                    response.message = "Success";
+                }
+                else
+                {
+                    response.status = false;
+                    response.StatusCode = 0;
+                    response.message = "Invalid";
+
+                }
+            }
+            else
+            {
+                response.status = false;
+                response.StatusCode = 0;
+                response.message = "Invalid Cart Id";
+            }
+
+            return Ok(response);
         }
 
         /// <summary>
@@ -460,9 +610,9 @@ namespace POS.API.Controllers.MobileApp
         {
             updateCustomerAddressCommand.Id = Id;
             var result = await _mediator.Send(updateCustomerAddressCommand);
-            //return ReturnFormattedResponse(result);
+            //return ReturnFormattedResponse(result);           
 
-            CustomerAddressResponseData response = new CustomerAddressResponseData();
+            CustomerAddressResponseData response = new CustomerAddressResponseData();       
 
             if (result != null)
             {

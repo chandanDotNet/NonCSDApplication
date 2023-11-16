@@ -75,7 +75,8 @@ namespace POS.Repository
                     Barcode = c.Barcode,
                     BrandName = c.Brand.Name,
                     WarehouseId = c.WarehouseId,
-                    WarehouseName = c.Warehouse.Name,
+                    WarehouseName = c.Warehouse.Name, 
+                    Discount=0,
                     ProductTaxes = _mapper.Map<List<ProductTaxDto>>(c.ProductTaxes),
                     Unit=_mapper.Map<UnitConversationDto>(c.Unit),
                     ProductUrl = !string.IsNullOrWhiteSpace(c.ProductUrl) ? Path.Combine(_pathHelper.ProductThumbnailImagePath, c.ProductUrl) : ""

@@ -283,6 +283,23 @@ namespace POS.Repository
                     { "CustomerName", new PropertyMappingValue(new List<string>() { "SalesOrder.Customer.CustomerName" } )},
                     { "SOCreatedDate", new PropertyMappingValue(new List<string>() { "SalesOrder.SOCreatedDate" }, true )}
             };
+        private Dictionary<string, PropertyMappingValue> _cartMapping =
+           new Dictionary<string, PropertyMappingValue>(StringComparer.OrdinalIgnoreCase)
+           {
+                { "Id", new PropertyMappingValue(new List<string>() { "Id" } ) },
+                { "CustomerId", new PropertyMappingValue(new List<string>() { "CustomerId" } )},
+                { "CustomerName", new PropertyMappingValue(new List<string>() { "CustomerName" } )},
+                { "ProductId", new PropertyMappingValue(new List<string>() { "ProductId" } )},
+                { "ProductName", new PropertyMappingValue(new List<string>() { "ProductName" } )},
+                { "Quantity", new PropertyMappingValue(new List<string>() { "Quantity" } )},
+                { "UnitPrice", new PropertyMappingValue(new List<string>() { "UnitPrice" } )},
+                { "UnitName", new PropertyMappingValue(new List<string>() { "UnitName" } )},
+                { "UnitId", new PropertyMappingValue(new List<string>() { "UnitId" } )},
+                { "Total", new PropertyMappingValue(new List<string>() { "Total" } )},
+                { "TaxValue", new PropertyMappingValue(new List<string>() { "TaxValue" } )},
+                { "Discount", new PropertyMappingValue(new List<string>() { "Discount" } )},
+                { "DiscountPercentage", new PropertyMappingValue(new List<string>() { "DiscountPercentage" } )},
+           };
 
 
         private Dictionary<string, PropertyMappingValue> _customerAddressPropertyMapping =
@@ -320,6 +337,7 @@ namespace POS.Repository
             propertyMappings.Add(new PropertyMapping<PurchaseOrderItemDto, PurchaseOrderItem>(_purchaseOrderItemPropertyMapping));
             propertyMappings.Add(new PropertyMapping<SalesOrderItemDto, SalesOrderItem>(_salesOrderItemPropertyMapping));
             propertyMappings.Add(new PropertyMapping<CustomerAddressDto, CustomerAddress>(_customerAddressPropertyMapping));
+            propertyMappings.Add(new PropertyMapping<CartDto, Cart>(_cartMapping));
         }
         public Dictionary<string, PropertyMappingValue> GetPropertyMapping
             <TSource, TDestination>()

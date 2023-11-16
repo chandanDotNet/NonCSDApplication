@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System;
 
+
 namespace POS.Domain
 {
     public class POSDbContext : IdentityDbContext<User, Role, Guid, UserClaim, UserRole, UserLogin, RoleClaim, UserToken>
@@ -26,6 +27,7 @@ namespace POS.Domain
         public DbSet<EmailSMTPSetting> EmailSMTPSettings { get; set; }
         public DbSet<Country> Countries { get; set; }
         public DbSet<Counter> Counters { get; set; }
+        public DbSet<Cart> Carts { get; set; }
         public DbSet<City> Cities { get; set; }
         public DbSet<Supplier> Suppliers { get; set; }
         public DbSet<SupplierAddress> SupplierAddresses { get; set; }
@@ -416,6 +418,14 @@ namespace POS.Domain
                     .OnDelete(DeleteBehavior.Restrict);
             });
 
+            builder.Entity<Cart>(b =>
+            {
+                b.HasOne(e => e.CreatedByUser)
+                    .WithMany()
+                    .HasForeignKey(ur => ur.CreatedBy)
+                    .OnDelete(DeleteBehavior.Restrict);
+            });
+
             builder.Entity<PurchaseOrderPayment>(b =>
             {
                 b.HasOne(e => e.CreatedByUser)
@@ -476,6 +486,8 @@ namespace POS.Domain
                     .IsRequired();
             });
 
+           
+
             builder.Entity<User>().ToTable("Users");
             builder.Entity<Role>().ToTable("Roles");
             builder.Entity<RoleClaim>().ToTable("RoleClaims");
@@ -483,6 +495,7 @@ namespace POS.Domain
             builder.Entity<UserLogin>().ToTable("UserLogins");
             builder.Entity<UserRole>().ToTable("UserRoles");
             builder.Entity<UserToken>().ToTable("UserTokens");
+            //builder.Entity<Cart>().ToTable("Carts");
             builder.DefalutMappingValue();
             builder.DefalutDeleteValueFilter();
         }

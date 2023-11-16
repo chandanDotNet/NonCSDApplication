@@ -43,21 +43,6 @@ D:\POS\Git_NONCSD_POS_API\API\POS.Data\obj\Debug\net7.0\POS.Data.dll
 D:\POS\Git_NONCSD_POS_API\API\POS.Data\obj\Debug\net7.0\refint\POS.Data.dll
 D:\POS\Git_NONCSD_POS_API\API\POS.Data\obj\Debug\net7.0\POS.Data.pdb
 D:\POS\Git_NONCSD_POS_API\API\POS.Data\obj\Debug\net7.0\ref\POS.Data.dll
-D:\Projects-2023\Dot Net\NonCSDApi2023\POS.Data\bin\Debug\net7.0\POS.Data.deps.json
-D:\Projects-2023\Dot Net\NonCSDApi2023\POS.Data\bin\Debug\net7.0\POS.Data.dll
-D:\Projects-2023\Dot Net\NonCSDApi2023\POS.Data\bin\Debug\net7.0\POS.Data.pdb
-D:\Projects-2023\Dot Net\NonCSDApi2023\POS.Data\bin\Debug\net7.0\POS.Helper.dll
-D:\Projects-2023\Dot Net\NonCSDApi2023\POS.Data\bin\Debug\net7.0\POS.Helper.pdb
-D:\Projects-2023\Dot Net\NonCSDApi2023\POS.Data\obj\Debug\net7.0\POS.Data.csproj.AssemblyReference.cache
-D:\Projects-2023\Dot Net\NonCSDApi2023\POS.Data\obj\Debug\net7.0\POS.Data.GeneratedMSBuildEditorConfig.editorconfig
-D:\Projects-2023\Dot Net\NonCSDApi2023\POS.Data\obj\Debug\net7.0\POS.Data.AssemblyInfoInputs.cache
-D:\Projects-2023\Dot Net\NonCSDApi2023\POS.Data\obj\Debug\net7.0\POS.Data.AssemblyInfo.cs
-D:\Projects-2023\Dot Net\NonCSDApi2023\POS.Data\obj\Debug\net7.0\POS.Data.csproj.CoreCompileInputs.cache
-D:\Projects-2023\Dot Net\NonCSDApi2023\POS.Data\obj\Debug\net7.0\POS.Data.csproj.CopyComplete
-D:\Projects-2023\Dot Net\NonCSDApi2023\POS.Data\obj\Debug\net7.0\POS.Data.dll
-D:\Projects-2023\Dot Net\NonCSDApi2023\POS.Data\obj\Debug\net7.0\refint\POS.Data.dll
-D:\Projects-2023\Dot Net\NonCSDApi2023\POS.Data\obj\Debug\net7.0\POS.Data.pdb
-D:\Projects-2023\Dot Net\NonCSDApi2023\POS.Data\obj\Debug\net7.0\ref\POS.Data.dll
 D:\POS\Git_NONCSD_POS_API\Non CSD API - Chandan (Working)\NonCSDApplication\POS.Data\bin\Debug\net7.0\POS.Data.deps.json
 D:\POS\Git_NONCSD_POS_API\Non CSD API - Chandan (Working)\NonCSDApplication\POS.Data\bin\Debug\net7.0\POS.Data.dll
 D:\POS\Git_NONCSD_POS_API\Non CSD API - Chandan (Working)\NonCSDApplication\POS.Data\bin\Debug\net7.0\POS.Data.pdb
@@ -73,3 +58,18 @@ D:\POS\Git_NONCSD_POS_API\Non CSD API - Chandan (Working)\NonCSDApplication\POS.
 D:\POS\Git_NONCSD_POS_API\Non CSD API - Chandan (Working)\NonCSDApplication\POS.Data\obj\Debug\net7.0\refint\POS.Data.dll
 D:\POS\Git_NONCSD_POS_API\Non CSD API - Chandan (Working)\NonCSDApplication\POS.Data\obj\Debug\net7.0\POS.Data.pdb
 D:\POS\Git_NONCSD_POS_API\Non CSD API - Chandan (Working)\NonCSDApplication\POS.Data\obj\Debug\net7.0\ref\POS.Data.dll
+D:\Projects-2023\Dot Net\NonCSDApi2023\POS.Data\bin\Debug\net7.0\POS.Data.deps.json
+D:\Projects-2023\Dot Net\NonCSDApi2023\POS.Data\bin\Debug\net7.0\POS.Data.dll
+D:\Projects-2023\Dot Net\NonCSDApi2023\POS.Data\bin\Debug\net7.0\POS.Data.pdb
+D:\Projects-2023\Dot Net\NonCSDApi2023\POS.Data\bin\Debug\net7.0\POS.Helper.dll
+D:\Projects-2023\Dot Net\NonCSDApi2023\POS.Data\bin\Debug\net7.0\POS.Helper.pdb
+D:\Projects-2023\Dot Net\NonCSDApi2023\POS.Data\obj\Debug\net7.0\POS.Data.csproj.AssemblyReference.cache
+D:\Projects-2023\Dot Net\NonCSDApi2023\POS.Data\obj\Debug\net7.0\POS.Data.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects-2023\Dot Net\NonCSDApi2023\POS.Data\obj\Debug\net7.0\POS.Data.AssemblyInfoInputs.cache
+D:\Projects-2023\Dot Net\NonCSDApi2023\POS.Data\obj\Debug\net7.0\POS.Data.AssemblyInfo.cs
+D:\Projects-2023\Dot Net\NonCSDApi2023\POS.Data\obj\Debug\net7.0\POS.Data.csproj.CoreCompileInputs.cache
+D:\Projects-2023\Dot Net\NonCSDApi2023\POS.Data\obj\Debug\net7.0\POS.Data.csproj.CopyComplete
+D:\Projects-2023\Dot Net\NonCSDApi2023\POS.Data\obj\Debug\net7.0\POS.Data.dll
+D:\Projects-2023\Dot Net\NonCSDApi2023\POS.Data\obj\Debug\net7.0\refint\POS.Data.dll
+D:\Projects-2023\Dot Net\NonCSDApi2023\POS.Data\obj\Debug\net7.0\POS.Data.pdb
+D:\Projects-2023\Dot Net\NonCSDApi2023\POS.Data\obj\Debug\net7.0\ref\POS.Data.dll

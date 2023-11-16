@@ -802,8 +802,7 @@
         </member>
         <member name="M:POS.API.Controllers.MobileApp.MobileAppController.LoginCustomers(POS.Data.CustomerResource)">
             <summary>
-            Login customers.
-            
+            Login customers.       
             </summary>
             <param name="customerResource">The customer resource.</param>
             <returns></returns>
@@ -831,8 +830,7 @@
         <member name="M:POS.API.Controllers.MobileApp.MobileAppController.GetProductDetails(POS.Data.Entities.ProductDetailsRequestData)">
             <summary>
             Get Product Details.
-            </summary>
-            <param name="id"></param>
+            </summary>       
             <returns></returns>
         </member>
         <member name="M:POS.API.Controllers.MobileApp.MobileAppController.ProductCategoriesList(POS.MediatR.CommandAndQuery.GetAllProductCategoriesQuery)">
@@ -840,6 +838,27 @@
             Get all Product Categories
             </summary>
             <param name="getAllProductCategoriesQuery"></param>
+            <returns></returns>
+        </member>
+        <member name="M:POS.API.Controllers.MobileApp.MobileAppController.CreateCart(POS.MediatR.CommandAndQuery.AddCartCommand)">
+            <summary>
+            Creates the cart.
+            </summary>
+            <param name="addCartCommand">The add cart command.</param>
+            <returns></returns>
+        </member>
+        <member name="M:POS.API.Controllers.MobileApp.MobileAppController.UpdateCart(POS.MediatR.CommandAndQuery.UpdateCartCommand)">
+            <summary>
+            Updates the cart.
+            </summary>
+            <param name="updateCartCommand">The update cart command.</param>
+            <returns></returns>
+        </member>
+        <member name="M:POS.API.Controllers.MobileApp.MobileAppController.GetCartList(POS.Data.CartResource)">
+            <summary>
+            Get All Cart List.
+            </summary>
+            <param name="cartResource"></param>
             <returns></returns>
         </member>
         <member name="M:POS.API.Controllers.MobileApp.MobileAppController.AddCustomerAddress(POS.MediatR.CustomerAddress.Commands.AddCustomerAddressCommand)">
@@ -868,6 +887,13 @@
             Delete Customer Address.
             </summary>
             <param name="Id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:POS.API.Controllers.MobileApp.MobileAppController.DeleteCart(POS.MediatR.CommandAndQuery.DeleteCartCommand)">
+            <summary>
+            Delete Cart By Id
+            </summary>
+            <param name="deleteCartCommand">The delete cart command.</param>
             <returns></returns>
         </member>
         <member name="M:POS.API.Controllers.MobileApp.MobileAppController.UpdateCustomerAddress(System.Guid,POS.MediatR.CustomerAddress.Commands.UpdateCustomerAddressCommand)">
