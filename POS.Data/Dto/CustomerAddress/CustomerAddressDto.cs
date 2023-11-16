@@ -12,8 +12,9 @@ namespace POS.Data.Dto
         public string HouseNo { get; set; }
         public string StreetDetails { get; set; }
         public string LandMark { get; set; }
-        public int Type { get; set; }
+        public string Type { get; set; }
         public Guid? CustomerId { get; set; }
         public string CustomerName { get; set; }
+        public bool IsPrimary { get; set; }
     }
 }

@@ -55,7 +55,8 @@ namespace POS.Repository
                     StreetDetails = c.StreetDetails,
                     Type = c.Type,
                     CustomerId = c.Customer.Id,
-                    CustomerName = c.Customer.CustomerName
+                    CustomerName = c.Customer.CustomerName,
+                    IsPrimary = c.IsPrimary
                 }).ToListAsync();
             return entities;
         }

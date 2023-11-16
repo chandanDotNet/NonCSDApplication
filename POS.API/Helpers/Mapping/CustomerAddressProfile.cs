@@ -11,7 +11,7 @@ namespace POS.API.Helpers.Mapping
         {
             CreateMap<CustomerAddress, CustomerAddressDto>().ReverseMap();
             CreateMap<AddCustomerAddressCommand, CustomerAddress>();
-            //CreateMap<UpdateCustomerAddressCommand, CustomerAddress>();
+            CreateMap<UpdateCustomerAddressCommand, CustomerAddress>();
         }
     }
 }

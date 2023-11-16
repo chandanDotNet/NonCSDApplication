@@ -863,6 +863,21 @@
             <param name="customerAddressResource"></param>
             <returns></returns>
         </member>
+        <member name="M:POS.API.Controllers.MobileApp.MobileAppController.DeleteCustomerAddress(System.Guid)">
+            <summary>
+            Delete Customer Address.
+            </summary>
+            <param name="Id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:POS.API.Controllers.MobileApp.MobileAppController.UpdateCustomerAddress(System.Guid,POS.MediatR.CustomerAddress.Commands.UpdateCustomerAddressCommand)">
+            <summary>
+            Update Customer Address.
+            </summary>
+            <param name="Id"></param>
+            <param name="updateCustomerAddressCommand"></param>
+            <returns></returns>
+        </member>
         <member name="M:POS.API.Controllers.NewsletterSubscriber.NewsletterSubscriberController.CreateNewsletterSubscriber(POS.MediatR.CommandAndQuery.AddNewsletterSubscriberCommand)">
             <summary>
             Creates the newsletter subscriber.

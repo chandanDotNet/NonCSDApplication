@@ -20,6 +20,7 @@ using POS.Data.Entities;
 using POS.Data.Resources;
 using POS.MediatR.Product.Command;
 using POS.MediatR.CustomerAddress.Commands;
+using POS.MediatR.Country.Commands;
 
 namespace POS.API.Controllers.MobileApp
 {
@@ -328,6 +329,7 @@ namespace POS.API.Controllers.MobileApp
             }
             //return CreatedAtAction("GetCustomerAddress", new { customerId = response.Data.CustomerId }, response.Data);
             CustomerAddressResponseData response = new CustomerAddressResponseData();
+           
             if (result != null)
             {
                 response.status = true;
@@ -414,6 +416,67 @@ namespace POS.API.Controllers.MobileApp
                 response.message = "Invalid";
             }
 
+            return Ok(response);
+        }
+
+        /// <summary>
+        /// Delete Customer Address.
+        /// </summary>
+        /// <param name="Id"></param>
+        /// <returns></returns>
+        [HttpDelete("CustomerAddress/{id}")]
+        public async Task<IActionResult> DeleteCustomerAddress(Guid Id)
+        {
+            var deleteCustomerAddressCommand = new DeleteCustomerAddressCommand { Id = Id };
+            var result = await _mediator.Send(deleteCustomerAddressCommand);
+            //return ReturnFormattedResponse(result);            
+            CustomerAddressListResponseData response = new CustomerAddressListResponseData();
+            if (result.Success)
+            {
+                response.status = true;
+                response.StatusCode = 1;
+                response.message = "Success";
+                response.Data = new CustomerAddressDto[0];
+            }
+            else
+            {
+                response.status = false;
+                response.StatusCode = 0;
+                response.message = "Invalid";
+            }
+
+            return Ok(response);
+        }
+
+        /// <summary>
+        /// Update Customer Address.
+        /// </summary>
+        /// <param name="Id"></param>
+        /// <param name="updateCustomerAddressCommand"></param>
+        /// <returns></returns>
+        [HttpPut("CustomerAddress/{Id}")]
+        [Produces("application/json", "application/xml", Type = typeof(CustomerAddressDto))]
+        public async Task<IActionResult> UpdateCustomerAddress(Guid Id, UpdateCustomerAddressCommand updateCustomerAddressCommand)
+        {
+            updateCustomerAddressCommand.Id = Id;
+            var result = await _mediator.Send(updateCustomerAddressCommand);
+            //return ReturnFormattedResponse(result);
+
+            CustomerAddressResponseData response = new CustomerAddressResponseData();
+
+            if (result != null)
+            {
+                response.status = true;
+                response.StatusCode = 1;
+                response.message = "Success";
+                response.Data = result.Data;
+            }
+            else
+            {
+                response.status = false;
+                response.StatusCode = 0;
+                response.message = "Invalid";
+            }
             return Ok(response);
         }
     }
