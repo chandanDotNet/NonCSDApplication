@@ -28,6 +28,7 @@ namespace POS.Data.Dto
         public Guid? WarehouseId { get; set; }
         public string WarehouseName { get; set; }
         public string BrandName { get; set; }
+        public decimal? Discount { get; set; }
         public UnitConversationDto Unit { get; set; }
         public List<ProductTaxDto> ProductTaxes { get; set; }
         public DateTime? CreatedDate { get; set; }

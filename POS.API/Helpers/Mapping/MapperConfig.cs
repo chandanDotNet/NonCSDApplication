@@ -48,6 +48,7 @@ namespace POS.API.Helpers.Mapping
                 mc.AddProfile(new BrandProfile());
                 mc.AddProfile(new CounterProfile());
                 mc.AddProfile(new InventoryProfle());
+                mc.AddProfile(new CartProfile());
             });
             return mappingConfig.CreateMapper();
         }

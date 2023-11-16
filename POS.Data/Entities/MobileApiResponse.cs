@@ -62,4 +62,24 @@ namespace POS.Data.Entities
         public string message { get; set; }
         public IList<ProductCategoryDto> Data { get; set; }
     }
+
+    public class IUDResponseData
+    {
+        public bool status { get; set; }
+        public int StatusCode { get; set; }
+        public string message { get; set; }
+        
+    }
+
+    public class CartListResponseData
+    {
+        public bool status { get; set; }
+        public int StatusCode { get; set; }
+        public string message { get; set; }
+        public int Skip { get; set; }
+        public int TotalPages { get; set; }
+        public int PageSize { get; set; }
+        public int TotalCount { get; set; }
+        public IList<CartDto> Data { get; set; }
+    }
 }

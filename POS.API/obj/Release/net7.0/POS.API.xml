@@ -842,6 +842,34 @@
             <param name="getAllProductCategoriesQuery"></param>
             <returns></returns>
         </member>
+        <member name="M:POS.API.Controllers.MobileApp.MobileAppController.CreateCart(POS.MediatR.CommandAndQuery.AddCartCommand)">
+            <summary>
+            Creates the cart.
+            </summary>
+            <param name="addCartCommand">The add cart command.</param>
+            <returns></returns>
+        </member>
+        <member name="M:POS.API.Controllers.MobileApp.MobileAppController.UpdateCart(POS.MediatR.CommandAndQuery.UpdateCartCommand)">
+            <summary>
+            Updates the cart.
+            </summary>
+            <param name="updateCartCommand">The update cart command.</param>
+            <returns></returns>
+        </member>
+        <member name="M:POS.API.Controllers.MobileApp.MobileAppController.GetCartList(POS.Data.CartResource)">
+            <summary>
+            Get All Cart List.
+            </summary>
+            <param name="cartResource"></param>
+            <returns></returns>
+        </member>
+        <member name="M:POS.API.Controllers.MobileApp.MobileAppController.DeleteCart(POS.MediatR.CommandAndQuery.DeleteCartCommand)">
+            <summary>
+            Delete Cart By Id
+            </summary>
+            <param name="deleteCartCommand">The delete cart command.</param>
+            <returns></returns>
+        </member>
         <member name="M:POS.API.Controllers.NewsletterSubscriber.NewsletterSubscriberController.CreateNewsletterSubscriber(POS.MediatR.CommandAndQuery.AddNewsletterSubscriberCommand)">
             <summary>
             Creates the newsletter subscriber.
