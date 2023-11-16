@@ -802,8 +802,7 @@
         </member>
         <member name="M:POS.API.Controllers.MobileApp.MobileAppController.LoginCustomers(POS.Data.CustomerResource)">
             <summary>
-            Login customers.
-            
+            Login customers.       
             </summary>
             <param name="customerResource">The customer resource.</param>
             <returns></returns>
@@ -831,8 +830,7 @@
         <member name="M:POS.API.Controllers.MobileApp.MobileAppController.GetProductDetails(POS.Data.Entities.ProductDetailsRequestData)">
             <summary>
             Get Product Details.
-            </summary>
-            <param name="id"></param>
+            </summary>       
             <returns></returns>
         </member>
         <member name="M:POS.API.Controllers.MobileApp.MobileAppController.ProductCategoriesList(POS.MediatR.CommandAndQuery.GetAllProductCategoriesQuery)">
