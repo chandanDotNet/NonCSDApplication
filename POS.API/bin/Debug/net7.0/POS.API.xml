@@ -842,6 +842,7 @@
             <param name="getAllProductCategoriesQuery"></param>
             <returns></returns>
         </member>
+<<<<<<< HEAD
         <member name="M:POS.API.Controllers.MobileApp.MobileAppController.CreateCart(POS.MediatR.CommandAndQuery.AddCartCommand)">
             <summary>
             Creates the cart.
@@ -868,6 +869,42 @@
             Delete Cart By Id
             </summary>
             <param name="deleteCartCommand">The delete cart command.</param>
+=======
+        <member name="M:POS.API.Controllers.MobileApp.MobileAppController.AddCustomerAddress(POS.MediatR.CustomerAddress.Commands.AddCustomerAddressCommand)">
+            <summary>
+            Create Customer Address.
+            </summary>
+            <param name="addCustomerAddressCommand"></param>
+            <returns></returns>
+        </member>
+        <member name="M:POS.API.Controllers.MobileApp.MobileAppController.GetCustomerAddress(System.Guid)">
+            <summary>
+            Get Customer Address.
+            </summary>
+            <param name="customerId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:POS.API.Controllers.MobileApp.MobileAppController.GetCustomerAddresses(POS.Data.Resources.CustomerAddressResource)">
+            <summary>
+            Get Customer Addresses
+            </summary>
+            <param name="customerAddressResource"></param>
+            <returns></returns>
+        </member>
+        <member name="M:POS.API.Controllers.MobileApp.MobileAppController.DeleteCustomerAddress(System.Guid)">
+            <summary>
+            Delete Customer Address.
+            </summary>
+            <param name="Id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:POS.API.Controllers.MobileApp.MobileAppController.UpdateCustomerAddress(System.Guid,POS.MediatR.CustomerAddress.Commands.UpdateCustomerAddressCommand)">
+            <summary>
+            Update Customer Address.
+            </summary>
+            <param name="Id"></param>
+            <param name="updateCustomerAddressCommand"></param>
+>>>>>>> 34fbf4f2fb1173f1fd23902968deddf67f22ab0e
             <returns></returns>
         </member>
         <member name="M:POS.API.Controllers.NewsletterSubscriber.NewsletterSubscriberController.CreateNewsletterSubscriber(POS.MediatR.CommandAndQuery.AddNewsletterSubscriberCommand)">

@@ -65,6 +65,10 @@ namespace POS.Domain
                .Property(b => b.ModifiedDate)
                .HasDefaultValueSql("GETUTCDATE()");
 
+            modelBuilder.Entity<CustomerAddress>()
+             .Property(b => b.ModifiedDate)
+             .HasDefaultValueSql("GETUTCDATE()");
+
             modelBuilder.Entity<ExpenseCategory>()
                .Property(b => b.ModifiedDate)
                .HasDefaultValueSql("GETUTCDATE()");

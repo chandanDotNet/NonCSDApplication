@@ -72,7 +72,7 @@ namespace POS.Domain
         public DbSet<SalesOrderPayment> SalesOrderPayments { get; set; }
         public DbSet<UnitConversation> UnitConversations { get; set; }
         public DbSet<WarehouseInventory> WarehouseInventories { get; set; }
-      
+        public DbSet<CustomerAddress> CustomerAddresses { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
@@ -461,6 +461,14 @@ namespace POS.Domain
             });
 
             builder.Entity<SalesOrderPayment>(b =>
+            {
+                b.HasOne(e => e.CreatedByUser)
+                    .WithMany()
+                    .HasForeignKey(ur => ur.CreatedBy)
+                    .OnDelete(DeleteBehavior.Restrict);
+            });
+
+            builder.Entity<CustomerAddress>(b =>
             {
                 b.HasOne(e => e.CreatedByUser)
                     .WithMany()

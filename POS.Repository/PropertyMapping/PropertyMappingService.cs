@@ -302,6 +302,16 @@ namespace POS.Repository
            };
 
 
+        private Dictionary<string, PropertyMappingValue> _customerAddressPropertyMapping =
+          new Dictionary<string, PropertyMappingValue>(StringComparer.OrdinalIgnoreCase)
+          {
+                { "HouseNo", new PropertyMappingValue(new List<string>() { "HouseNo" } ) },
+                { "StreetDetails", new PropertyMappingValue(new List<string>() { "StreetDetails" } ) },
+                { "LandMark", new PropertyMappingValue(new List<string>() { "LandMark" } ) },
+                { "Type", new PropertyMappingValue(new List<string>() { "Type" } ) },
+                { "CustomerId", new PropertyMappingValue(new List<string>() { "CustomerId" } ) },
+                { "CustomerName", new PropertyMappingValue(new List<string>() { "Customer.CustomerName" } )},
+          };
 
         private IList<IPropertyMapping> propertyMappings = new List<IPropertyMapping>();
         public PropertyMappingService()
@@ -326,6 +336,7 @@ namespace POS.Repository
             propertyMappings.Add(new PropertyMapping<SalesOrderPaymentDto, SalesOrderPayment>(_salesOrderPaymentPropertyMapping));
             propertyMappings.Add(new PropertyMapping<PurchaseOrderItemDto, PurchaseOrderItem>(_purchaseOrderItemPropertyMapping));
             propertyMappings.Add(new PropertyMapping<SalesOrderItemDto, SalesOrderItem>(_salesOrderItemPropertyMapping));
+            propertyMappings.Add(new PropertyMapping<CustomerAddressDto, CustomerAddress>(_customerAddressPropertyMapping));
             propertyMappings.Add(new PropertyMapping<CartDto, Cart>(_cartMapping));
         }
         public Dictionary<string, PropertyMappingValue> GetPropertyMapping
