@@ -636,6 +636,126 @@ namespace POS.API.Controllers.MobileApp
             return Ok(response);
         }
 
+
+        //Wishlist-list
+
+        /// <summary>
+        /// Creates the cart.
+        /// </summary>
+        /// <param name="addWishlistCommand">The add cart command.</param>
+        /// <returns></returns>
+        //[HttpPost, DisableRequestSizeLimit]
+        [HttpPost("AddToWishlist")]
+        public async Task<IActionResult> CreateWishlist([FromBody] AddWishlistCommand addWishlistCommand)
+        {
+            IUDResponseData response = new IUDResponseData();
+            var result = await _mediator.Send(addWishlistCommand);
+
+            if (result.Success)
+            {
+                response.status = true;
+                response.StatusCode = 1;
+                response.message = "Success";
+            }
+            else
+            {
+                response.status = false;
+                response.StatusCode = 0;
+                response.message = "Invalid";
+
+            }
+            return Ok(response);
+        }
+
+
+        /// <summary>
+        /// Get All Cart List.
+        /// </summary>
+        /// <param name="wishlistResource"></param>
+        /// <returns></returns>
+        [HttpPost("GetWishlist")]
+        public async Task<IActionResult> GetWishlist(WishlistResource wishlistResource)
+        {
+
+            WishlistResponseData response = new WishlistResponseData();
+
+            try
+            {
+                var query = new GetAllWishlistQuery
+                {
+                    WishlistResource = wishlistResource
+                };
+                var result = await _mediator.Send(query);
+
+                if (result.Count > 0)
+                {
+                    response.TotalCount = result.TotalCount;
+                    response.PageSize = result.PageSize;
+                    response.Skip = result.Skip;
+                    response.TotalPages = result.TotalPages;
+
+                    response.status = true;
+                    response.StatusCode = 1;
+                    response.message = "Success";
+                    response.Data = result;
+                }
+                else
+                {
+                    response.status = false;
+                    response.StatusCode = 0;
+                    response.message = "Invalid";
+                    response.Data = result;
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+                response.status = false;
+                response.StatusCode = 0;
+                response.message = ex.Message;
+            }
+            return Ok(response);
+        }
+
+
+        /// <summary>
+        /// Delete Wishlist By Id
+        /// </summary>
+        /// <param name="deleteWishlistCommand">The delete cart command.</param>
+        /// <returns></returns>
+        [HttpDelete("DeleteWishlist")]
+        public async Task<IActionResult> DeleteWishlist(DeleteWishlistCommand deleteWishlistCommand)
+        {
+            IUDResponseData response = new IUDResponseData();
+            if (deleteWishlistCommand.Id != null)
+            {
+                var command = new DeleteWishlistCommand { Id = deleteWishlistCommand.Id };
+                var result = await _mediator.Send(command);
+                if (result.Success)
+                {
+                    response.status = true;
+                    response.StatusCode = 1;
+                    response.message = "Success";
+                }
+                else
+                {
+                    response.status = false;
+                    response.StatusCode = 0;
+                    response.message = "Invalid";
+
+                }
+            }
+            else
+            {
+                response.status = false;
+                response.StatusCode = 0;
+                response.message = "Invalid Cart Id";
+            }
+
+            return Ok(response);
+        }
+
         /// <summary>
         /// Add Payment Card.
         /// </summary>

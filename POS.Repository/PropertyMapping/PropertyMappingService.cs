@@ -313,6 +313,14 @@ namespace POS.Repository
                 { "CustomerName", new PropertyMappingValue(new List<string>() { "Customer.CustomerName" } )},
           };
 
+        private Dictionary<string, PropertyMappingValue> _wishlistMapping =
+           new Dictionary<string, PropertyMappingValue>(StringComparer.OrdinalIgnoreCase)
+           {
+                { "Id", new PropertyMappingValue(new List<string>() { "Id" } ) },
+                { "CustomerId", new PropertyMappingValue(new List<string>() { "CustomerId" } )},               
+                { "ProductId", new PropertyMappingValue(new List<string>() { "ProductId" } )},                
+           };
+
         private Dictionary<string, PropertyMappingValue> _paymentCardPropertyMapping =
           new Dictionary<string, PropertyMappingValue>(StringComparer.OrdinalIgnoreCase)
           {
@@ -351,6 +359,7 @@ namespace POS.Repository
             propertyMappings.Add(new PropertyMapping<SalesOrderItemDto, SalesOrderItem>(_salesOrderItemPropertyMapping));
             propertyMappings.Add(new PropertyMapping<CustomerAddressDto, CustomerAddress>(_customerAddressPropertyMapping));
             propertyMappings.Add(new PropertyMapping<CartDto, Cart>(_cartMapping));
+            propertyMappings.Add(new PropertyMapping<WishlistDto, Wishlist>(_wishlistMapping));
             propertyMappings.Add(new PropertyMapping<CustomerAddressDto, CustomerAddress>(_cartMapping));
             propertyMappings.Add(new PropertyMapping<PaymentCardDto, PaymentCard>(_paymentCardPropertyMapping));
         }

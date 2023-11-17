@@ -74,6 +74,7 @@ namespace POS.API.Helpers
             services.AddScoped<ICustomerAddressRepository, CustomerAddressRepository>();
 
             services.AddScoped<ICartRepository, CartRepository>();
+            services.AddScoped<IWishlistRepository, WishlistRepository>();
             services.AddScoped<IPaymentCardRepository, PaymentCardRepository>();
 
         }
