@@ -86,25 +86,3 @@ D:\Projects-2023\Dot Net\NonCSDApi2023\POS.Repository\obj\Debug\net7.0\POS.Repos
 D:\Projects-2023\Dot Net\NonCSDApi2023\POS.Repository\obj\Debug\net7.0\refint\POS.Repository.dll
 D:\Projects-2023\Dot Net\NonCSDApi2023\POS.Repository\obj\Debug\net7.0\POS.Repository.pdb
 D:\Projects-2023\Dot Net\NonCSDApi2023\POS.Repository\obj\Debug\net7.0\ref\POS.Repository.dll
-D:\POS\Git_NONCSD_POS_API\Non CSD API - Chandan (Working)\NonCSDApplication\POS.Repository\obj\Debug\net7.0\POS.Repository.csproj.AssemblyReference.cache
-D:\POS\Git_NONCSD_POS_API\Non CSD API - Chandan (Working)\NonCSDApplication\POS.Repository\obj\Debug\net7.0\POS.Repository.GeneratedMSBuildEditorConfig.editorconfig
-D:\POS\Git_NONCSD_POS_API\Non CSD API - Chandan (Working)\NonCSDApplication\POS.Repository\obj\Debug\net7.0\POS.Repository.AssemblyInfoInputs.cache
-D:\POS\Git_NONCSD_POS_API\Non CSD API - Chandan (Working)\NonCSDApplication\POS.Repository\obj\Debug\net7.0\POS.Repository.AssemblyInfo.cs
-D:\POS\Git_NONCSD_POS_API\Non CSD API - Chandan (Working)\NonCSDApplication\POS.Repository\obj\Debug\net7.0\POS.Repository.csproj.CoreCompileInputs.cache
-D:\POS\Git_NONCSD_POS_API\Non CSD API - Chandan (Working)\NonCSDApplication\POS.Repository\bin\Debug\net7.0\Migrations\20221105115351_Initial_Data.sql
-D:\POS\Git_NONCSD_POS_API\Non CSD API - Chandan (Working)\NonCSDApplication\POS.Repository\bin\Debug\net7.0\POS.Repository.deps.json
-D:\POS\Git_NONCSD_POS_API\Non CSD API - Chandan (Working)\NonCSDApplication\POS.Repository\bin\Debug\net7.0\POS.Repository.dll
-D:\POS\Git_NONCSD_POS_API\Non CSD API - Chandan (Working)\NonCSDApplication\POS.Repository\bin\Debug\net7.0\POS.Repository.pdb
-D:\POS\Git_NONCSD_POS_API\Non CSD API - Chandan (Working)\NonCSDApplication\POS.Repository\bin\Debug\net7.0\POS.Common.dll
-D:\POS\Git_NONCSD_POS_API\Non CSD API - Chandan (Working)\NonCSDApplication\POS.Repository\bin\Debug\net7.0\POS.Data.dll
-D:\POS\Git_NONCSD_POS_API\Non CSD API - Chandan (Working)\NonCSDApplication\POS.Repository\bin\Debug\net7.0\POS.Domain.dll
-D:\POS\Git_NONCSD_POS_API\Non CSD API - Chandan (Working)\NonCSDApplication\POS.Repository\bin\Debug\net7.0\POS.Helper.dll
-D:\POS\Git_NONCSD_POS_API\Non CSD API - Chandan (Working)\NonCSDApplication\POS.Repository\bin\Debug\net7.0\POS.Common.pdb
-D:\POS\Git_NONCSD_POS_API\Non CSD API - Chandan (Working)\NonCSDApplication\POS.Repository\bin\Debug\net7.0\POS.Data.pdb
-D:\POS\Git_NONCSD_POS_API\Non CSD API - Chandan (Working)\NonCSDApplication\POS.Repository\bin\Debug\net7.0\POS.Domain.pdb
-D:\POS\Git_NONCSD_POS_API\Non CSD API - Chandan (Working)\NonCSDApplication\POS.Repository\bin\Debug\net7.0\POS.Helper.pdb
-D:\POS\Git_NONCSD_POS_API\Non CSD API - Chandan (Working)\NonCSDApplication\POS.Repository\obj\Debug\net7.0\POS.Repository.csproj.CopyComplete
-D:\POS\Git_NONCSD_POS_API\Non CSD API - Chandan (Working)\NonCSDApplication\POS.Repository\obj\Debug\net7.0\POS.Repository.dll
-D:\POS\Git_NONCSD_POS_API\Non CSD API - Chandan (Working)\NonCSDApplication\POS.Repository\obj\Debug\net7.0\refint\POS.Repository.dll
-D:\POS\Git_NONCSD_POS_API\Non CSD API - Chandan (Working)\NonCSDApplication\POS.Repository\obj\Debug\net7.0\POS.Repository.pdb
-D:\POS\Git_NONCSD_POS_API\Non CSD API - Chandan (Working)\NonCSDApplication\POS.Repository\obj\Debug\net7.0\ref\POS.Repository.dll
