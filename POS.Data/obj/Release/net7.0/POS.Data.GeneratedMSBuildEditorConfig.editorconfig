@@ -8,4 +8,8 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = POS.Data
+<<<<<<< HEAD
 build_property.ProjectDir = D:\Projects-2023\Dot Net\NonCSDApi2023\POS.Data\
+=======
+build_property.ProjectDir = D:\POS\Git_NONCSD_POS_API\Non CSD API - Chandan (Working)\NonCSDApplication\POS.Data\
+>>>>>>> 5242113fc293bf6d8c5ecc31ea10bcee8d082d6a

@@ -1,7 +1,18 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\POS.API",
+    "\\POS.API\\Controllers",
+    "\\POS.API\\Controllers\\ProductCategory",
+    "\\POS.Data",
+    "\\POS.Data\\Entities",
+    "\\POS.Data\\Entities\\Lookups",
+    "\\POS.MediatR",
+    "\\POS.MediatR\\CustomerAddress",
+    "\\POS.MediatR\\CustomerAddress\\Handlers",
+    "\\POS.Repository",
+    "\\POS.Repository\\CustomerAddress"
   ],
-  "SelectedNode": "\\POS.sln",
+  "SelectedNode": "\\POS.API\\Controllers\\MobileApp\\MobileAppController.cs",
   "PreviewInSolutionExplorer": false
 }

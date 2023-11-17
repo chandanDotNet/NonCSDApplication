@@ -177,6 +177,10 @@ namespace POS.Domain
 
             modelBuilder.Entity<Wishlist>()
                .HasQueryFilter(p => !p.IsDeleted);
+
+            modelBuilder.Entity<PaymentCard>()
+              .HasQueryFilter(p => !p.IsDeleted);
+
         }
     }
 }

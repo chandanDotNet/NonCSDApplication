@@ -51,6 +51,7 @@ namespace POS.API.Helpers.Mapping
                 mc.AddProfile(new CartProfile());
                 mc.AddProfile(new CustomerAddressProfile());
                 mc.AddProfile(new WishlistProfile());
+                mc.AddProfile(new PaymentCardProfile());
             });
             return mappingConfig.CreateMapper();
         }

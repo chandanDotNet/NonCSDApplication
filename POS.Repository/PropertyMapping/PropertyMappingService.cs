@@ -321,6 +321,19 @@ namespace POS.Repository
                 { "ProductId", new PropertyMappingValue(new List<string>() { "ProductId" } )},                
            };
 
+        private Dictionary<string, PropertyMappingValue> _paymentCardPropertyMapping =
+          new Dictionary<string, PropertyMappingValue>(StringComparer.OrdinalIgnoreCase)
+          {
+                { "NameOnCard", new PropertyMappingValue(new List<string>() { "NameOnCard" } ) },
+                { "CardNumber", new PropertyMappingValue(new List<string>() { "CardNumber" } ) },
+                { "ExpiryDate", new PropertyMappingValue(new List<string>() { "ExpiryDate" } ) },
+                { "CardType", new PropertyMappingValue(new List<string>() { "CardType" } ) },
+                { "NickNameForCard", new PropertyMappingValue(new List<string>() { "NickNameForCard" } ) },
+                { "CVV", new PropertyMappingValue(new List<string>() { "CVV" } ) },
+                { "CustomerId", new PropertyMappingValue(new List<string>() { "CustomerId" } ) },
+                { "CustomerName", new PropertyMappingValue(new List<string>() { "Customer.CustomerName" } )},
+          };
+
         private IList<IPropertyMapping> propertyMappings = new List<IPropertyMapping>();
         public PropertyMappingService()
         {
@@ -347,6 +360,7 @@ namespace POS.Repository
             propertyMappings.Add(new PropertyMapping<CustomerAddressDto, CustomerAddress>(_customerAddressPropertyMapping));
             propertyMappings.Add(new PropertyMapping<CartDto, Cart>(_cartMapping));
             propertyMappings.Add(new PropertyMapping<WishlistDto, Wishlist>(_wishlistMapping));
+            propertyMappings.Add(new PropertyMapping<CustomerAddressDto, CustomerAddress>(_cartMapping));
         }
         public Dictionary<string, PropertyMappingValue> GetPropertyMapping
             <TSource, TDestination>()

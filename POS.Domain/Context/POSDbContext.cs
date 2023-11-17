@@ -73,7 +73,11 @@ namespace POS.Domain
         public DbSet<UnitConversation> UnitConversations { get; set; }
         public DbSet<WarehouseInventory> WarehouseInventories { get; set; }
         public DbSet<CustomerAddress> CustomerAddresses { get; set; }
+<<<<<<< HEAD
         public DbSet<Wishlist> Wishlists { get; set; }
+=======
+        public DbSet<PaymentCard> PaymentCards { get; set; }
+>>>>>>> 5242113fc293bf6d8c5ecc31ea10bcee8d082d6a
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
@@ -470,6 +474,15 @@ namespace POS.Domain
             });
 
             builder.Entity<CustomerAddress>(b =>
+            {
+                b.HasOne(e => e.CreatedByUser)
+                    .WithMany()
+                    .HasForeignKey(ur => ur.CreatedBy)
+                    .OnDelete(DeleteBehavior.Restrict);
+            });
+
+
+            builder.Entity<PaymentCard>(b =>
             {
                 b.HasOne(e => e.CreatedByUser)
                     .WithMany()
