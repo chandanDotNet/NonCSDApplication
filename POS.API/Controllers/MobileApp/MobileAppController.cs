@@ -22,6 +22,7 @@ using POS.MediatR.Product.Command;
 using POS.MediatR.CustomerAddress.Commands;
 using POS.MediatR.Country.Commands;
 using POS.MediatR.Cart;
+using POS.MediatR.PaymentCard.Commands;
 
 namespace POS.API.Controllers.MobileApp
 {
@@ -424,7 +425,7 @@ namespace POS.API.Controllers.MobileApp
         }
 
 
-       /// <summary>
+        /// <summary>
         /// Create Customer Address.
         /// </summary>
         /// <param name="addCustomerAddressCommand"></param>
@@ -515,6 +516,11 @@ namespace POS.API.Controllers.MobileApp
             CustomerAddressListResponseData response = new CustomerAddressListResponseData();
             if (result.Count > 0)
             {
+                response.TotalCount = result.TotalCount;
+                response.PageSize = result.PageSize;
+                response.Skip = result.Skip;
+                response.TotalPages = result.TotalPages;
+
                 response.status = true;
                 response.StatusCode = 1;
                 response.message = "Success";
@@ -613,6 +619,151 @@ namespace POS.API.Controllers.MobileApp
             //return ReturnFormattedResponse(result);           
 
             CustomerAddressResponseData response = new CustomerAddressResponseData();       
+
+            if (result != null)
+            {
+                response.status = true;
+                response.StatusCode = 1;
+                response.message = "Success";
+                response.Data = result.Data;
+            }
+            else
+            {
+                response.status = false;
+                response.StatusCode = 0;
+                response.message = "Invalid";
+            }
+            return Ok(response);
+        }
+
+        /// <summary>
+        /// Add Payment Card.
+        /// </summary>
+        /// <param name="addPaymentCardCommand"></param>
+        /// <returns></returns>
+        [HttpPost("PaymentCard")]
+        [Produces("application/json", "application/xml", Type = typeof(PaymentCardDto))]
+        public async Task<IActionResult> AddPaymentCard(AddPaymentCardCommand addPaymentCardCommand)
+        {
+            var result = await _mediator.Send(addPaymentCardCommand);
+            if (!result.Success)
+            {
+                return ReturnFormattedResponse(result);
+            }
+            //return CreatedAtAction("GetCustomerAddress", new { customerId = response.Data.CustomerId }, response.Data);
+            PaymentCardResponseData response = new PaymentCardResponseData();
+
+            if (result != null)
+            {
+                response.status = true;
+                response.StatusCode = 1;
+                response.message = "Success";
+                response.Data = result.Data;
+            }
+            else
+            {
+                response.status = false;
+                response.StatusCode = 0;
+                response.message = "Invalid";
+            }
+            return Ok(response);
+        }
+
+
+        /// <summary>
+        /// Get Payment Cards
+        /// </summary>
+        /// <param name="paymentCardResource"></param>
+        /// <returns></returns>
+
+        [HttpGet("GetPaymentCards")]
+        public async Task<IActionResult> GetPaymentCards([FromQuery] PaymentCardResource paymentCardResource)
+        {
+            var getPaymentCardQuery = new GetPaymentCardQuery
+            {
+                PaymentCardResource = paymentCardResource
+            };
+            var result = await _mediator.Send(getPaymentCardQuery);
+
+            var paginationMetadata = new
+            {
+                totalCount = result.TotalCount,
+                pageSize = result.PageSize,
+                skip = result.Skip,
+                totalPages = result.TotalPages
+            };
+            Response.Headers.Add("X-Pagination",
+                Newtonsoft.Json.JsonConvert.SerializeObject(paginationMetadata));
+
+            PaymentCardListResponseData response = new PaymentCardListResponseData();
+            if (result.Count > 0)
+            {
+                response.TotalCount = result.TotalCount;
+                response.PageSize = result.PageSize;
+                response.Skip = result.Skip;
+                response.TotalPages = result.TotalPages;
+
+                response.status = true;
+                response.StatusCode = 1;
+                response.message = "Success";
+                response.Data = result;
+            }
+            else
+            {
+                response.status = false;
+                response.StatusCode = 0;
+                response.message = "Invalid";
+            }
+
+            return Ok(response);
+        }
+
+
+        /// <summary>
+        /// Delete CPayment Card.
+        /// </summary>
+        /// <param name="Id"></param>
+        /// <returns></returns>
+        [HttpDelete("PaymentCard/{id}")]
+        public async Task<IActionResult> DeletePaymentCard(Guid Id)
+        {
+            var deleteCustomerAddressCommand = new DeleteCustomerAddressCommand { Id = Id };
+            var result = await _mediator.Send(deleteCustomerAddressCommand);
+            //return ReturnFormattedResponse(result);            
+            PaymentCardListResponseData response = new PaymentCardListResponseData();
+            if (result.Success)
+            {
+                response.status = true;
+                response.StatusCode = 1;
+                response.message = "Success";
+                response.Data = new PaymentCardDto[0];
+            }
+            else
+            {
+                response.status = false;
+                response.StatusCode = 0;
+                response.message = "Invalid";
+            }
+
+            return Ok(response);
+
+        }
+
+        /// <summary>
+        /// Update Payment Card.
+        /// </summary>
+        /// <param name="Id"></param>
+        /// <param name="updatePaymentCardCommand"></param>
+        /// <returns></returns>
+        [HttpPut("PaymentCard/{Id}")]
+        [Produces("application/json", "application/xml", Type = typeof(PaymentCardDto))]
+        public async Task<IActionResult> UpdatePaymentCard(Guid Id, UpdatePaymentCardCommand updatePaymentCardCommand)
+        {
+            updatePaymentCardCommand.Id = Id;
+            var result = await _mediator.Send(updatePaymentCardCommand);
+            //return ReturnFormattedResponse(result);           
+
+            PaymentCardResponseData response = new PaymentCardResponseData();
 
             if (result != null)
             {

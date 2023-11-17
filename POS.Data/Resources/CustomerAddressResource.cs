@@ -14,10 +14,12 @@ namespace POS.Data.Resources
         }
         public string CustomerName { get; set; }
         public Guid Id { get; set; }
-        public string HouseNo { get; set; }
-        public string StreetDetails { get; set; }
-        public string LandMark { get; set; }
-        public string Type { get; set; }
+        public string NameOnCard { get; set; }
+        public string CardNumber { get; set; }
+        public string ExpiryDate { get; set; }
+        public string CardType { get; set; }
+        public string NickNameForCard { get; set; }
+        public string CVV { get; set; }
         public Guid? CustomerId { get; set; }
         public bool IsPrimary { get; set; }
     }

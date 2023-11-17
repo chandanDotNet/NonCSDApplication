@@ -170,6 +170,10 @@ namespace POS.Domain
 
             modelBuilder.Entity<Cart>()
                .HasQueryFilter(p => !p.IsDeleted);
+
+            modelBuilder.Entity<PaymentCard>()
+              .HasQueryFilter(p => !p.IsDeleted);
+
         }
     }
 }

@@ -17,5 +17,6 @@ namespace POS.MediatR.CustomerAddress.Commands
         public string LandMark { get; set; }
         public string Type { get; set; }
         public bool IsPrimary { get; set; }
+        public Guid? CustomerId { get; set; }
     }
 }
