@@ -727,8 +727,8 @@ namespace POS.API.Controllers.MobileApp
         [HttpDelete("PaymentCard/{id}")]
         public async Task<IActionResult> DeletePaymentCard(Guid Id)
         {
-            var deleteCustomerAddressCommand = new DeleteCustomerAddressCommand { Id = Id };
-            var result = await _mediator.Send(deleteCustomerAddressCommand);
+            var deletePaymentCardCommand = new DeletePaymentCardCommand { Id = Id };
+            var result = await _mediator.Send(deletePaymentCardCommand);
             //return ReturnFormattedResponse(result);            
             PaymentCardListResponseData response = new PaymentCardListResponseData();
             if (result.Success)

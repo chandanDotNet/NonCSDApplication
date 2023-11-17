@@ -352,6 +352,7 @@ namespace POS.Repository
             propertyMappings.Add(new PropertyMapping<CustomerAddressDto, CustomerAddress>(_customerAddressPropertyMapping));
             propertyMappings.Add(new PropertyMapping<CartDto, Cart>(_cartMapping));
             propertyMappings.Add(new PropertyMapping<CustomerAddressDto, CustomerAddress>(_cartMapping));
+            propertyMappings.Add(new PropertyMapping<PaymentCardDto, PaymentCard>(_paymentCardPropertyMapping));
         }
         public Dictionary<string, PropertyMappingValue> GetPropertyMapping
             <TSource, TDestination>()
