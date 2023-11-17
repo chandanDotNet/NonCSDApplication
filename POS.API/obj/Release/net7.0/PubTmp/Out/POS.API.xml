@@ -904,6 +904,56 @@
             <param name="updateCustomerAddressCommand"></param>
             <returns></returns>
         </member>
+        <member name="M:POS.API.Controllers.MobileApp.MobileAppController.CreateWishlist(POS.MediatR.CommandAndQuery.AddWishlistCommand)">
+            <summary>
+            Creates the cart.
+            </summary>
+            <param name="addWishlistCommand">The add cart command.</param>
+            <returns></returns>
+        </member>
+        <member name="M:POS.API.Controllers.MobileApp.MobileAppController.GetWishlist(POS.Data.WishlistResource)">
+            <summary>
+            Get All Cart List.
+            </summary>
+            <param name="wishlistResource"></param>
+            <returns></returns>
+        </member>
+        <member name="M:POS.API.Controllers.MobileApp.MobileAppController.DeleteWishlist(POS.MediatR.CommandAndQuery.DeleteWishlistCommand)">
+            <summary>
+            Delete Wishlist By Id
+            </summary>
+            <param name="deleteWishlistCommand">The delete cart command.</param>
+            <returns></returns>
+        </member>
+        <member name="M:POS.API.Controllers.MobileApp.MobileAppController.AddPaymentCard(POS.MediatR.PaymentCard.Commands.AddPaymentCardCommand)">
+            <summary>
+            Add Payment Card.
+            </summary>
+            <param name="addPaymentCardCommand"></param>
+            <returns></returns>
+        </member>
+        <member name="M:POS.API.Controllers.MobileApp.MobileAppController.GetPaymentCards(POS.Data.Resources.PaymentCardResource)">
+            <summary>
+            Get Payment Cards
+            </summary>
+            <param name="paymentCardResource"></param>
+            <returns></returns>
+        </member>
+        <member name="M:POS.API.Controllers.MobileApp.MobileAppController.DeletePaymentCard(System.Guid)">
+            <summary>
+            Delete CPayment Card.
+            </summary>
+            <param name="Id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:POS.API.Controllers.MobileApp.MobileAppController.UpdatePaymentCard(System.Guid,POS.MediatR.PaymentCard.Commands.UpdatePaymentCardCommand)">
+            <summary>
+            Update Payment Card.
+            </summary>
+            <param name="Id"></param>
+            <param name="updatePaymentCardCommand"></param>
+            <returns></returns>
+        </member>
         <member name="M:POS.API.Controllers.NewsletterSubscriber.NewsletterSubscriberController.CreateNewsletterSubscriber(POS.MediatR.CommandAndQuery.AddNewsletterSubscriberCommand)">
             <summary>
             Creates the newsletter subscriber.
