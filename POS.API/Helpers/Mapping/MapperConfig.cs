@@ -50,6 +50,7 @@ namespace POS.API.Helpers.Mapping
                 mc.AddProfile(new InventoryProfle());
                 mc.AddProfile(new CartProfile());
                 mc.AddProfile(new CustomerAddressProfile());
+                mc.AddProfile(new WishlistProfile());
             });
             return mappingConfig.CreateMapper();
         }

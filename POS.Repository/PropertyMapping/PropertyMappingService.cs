@@ -313,6 +313,14 @@ namespace POS.Repository
                 { "CustomerName", new PropertyMappingValue(new List<string>() { "Customer.CustomerName" } )},
           };
 
+        private Dictionary<string, PropertyMappingValue> _wishlistMapping =
+           new Dictionary<string, PropertyMappingValue>(StringComparer.OrdinalIgnoreCase)
+           {
+                { "Id", new PropertyMappingValue(new List<string>() { "Id" } ) },
+                { "CustomerId", new PropertyMappingValue(new List<string>() { "CustomerId" } )},               
+                { "ProductId", new PropertyMappingValue(new List<string>() { "ProductId" } )},                
+           };
+
         private IList<IPropertyMapping> propertyMappings = new List<IPropertyMapping>();
         public PropertyMappingService()
         {
@@ -338,6 +346,7 @@ namespace POS.Repository
             propertyMappings.Add(new PropertyMapping<SalesOrderItemDto, SalesOrderItem>(_salesOrderItemPropertyMapping));
             propertyMappings.Add(new PropertyMapping<CustomerAddressDto, CustomerAddress>(_customerAddressPropertyMapping));
             propertyMappings.Add(new PropertyMapping<CartDto, Cart>(_cartMapping));
+            propertyMappings.Add(new PropertyMapping<WishlistDto, Wishlist>(_wishlistMapping));
         }
         public Dictionary<string, PropertyMappingValue> GetPropertyMapping
             <TSource, TDestination>()
