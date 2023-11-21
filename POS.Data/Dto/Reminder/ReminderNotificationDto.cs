@@ -16,5 +16,6 @@ namespace POS.Data.Dto
         public bool IsDeleted { get; set; }
         public bool IsEmailNotification { get; set; }
         public ReminderDto Reminder { get; set; }
+        public Guid? CustomerId { get; set; }
     }
 }

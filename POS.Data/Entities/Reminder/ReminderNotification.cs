@@ -12,5 +12,6 @@ namespace POS.Data
         public bool IsDeleted { get; set; }
         public bool IsEmailNotification { get; set; }
         public Reminder Reminder { get; set; }
+        public Guid? CustomerId { get; set; }
     }
 }

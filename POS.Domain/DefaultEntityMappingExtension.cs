@@ -80,6 +80,10 @@ namespace POS.Domain
             modelBuilder.Entity<Wishlist>()
               .Property(b => b.ModifiedDate)
               .HasDefaultValueSql("GETUTCDATE()");
+
+            modelBuilder.Entity<PaymentCard>()
+              .Property(b => b.ModifiedDate)
+              .HasDefaultValueSql("GETUTCDATE()");
         }
 
         public static void DefalutDeleteValueFilter(this ModelBuilder modelBuilder)
@@ -179,6 +183,9 @@ namespace POS.Domain
                .HasQueryFilter(p => !p.IsDeleted);
 
             modelBuilder.Entity<PaymentCard>()
+              .HasQueryFilter(p => !p.IsDeleted);
+
+            modelBuilder.Entity<CustomerAddress>()
               .HasQueryFilter(p => !p.IsDeleted);
 
         }

@@ -16,5 +16,6 @@ namespace POS.Data.Resources
         public string Subject { get; set; }
         public string Message { get; set; }
         public Frequency? Frequency { get; set; }
+        public Guid? CustomerId { get; set; }
     }
 }

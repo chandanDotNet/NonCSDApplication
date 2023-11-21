@@ -58,3 +58,18 @@ D:\Projects-2023\Dot Net\NonCSDApi2023\POS.Data\obj\Debug\net7.0\POS.Data.dll
 D:\Projects-2023\Dot Net\NonCSDApi2023\POS.Data\obj\Debug\net7.0\refint\POS.Data.dll
 D:\Projects-2023\Dot Net\NonCSDApi2023\POS.Data\obj\Debug\net7.0\POS.Data.pdb
 D:\Projects-2023\Dot Net\NonCSDApi2023\POS.Data\obj\Debug\net7.0\ref\POS.Data.dll
+D:\POS\Git_NONCSD_POS_API\Non CSD API - Chandan (Working)\NonCSDApplication\POS.Data\bin\Debug\net7.0\POS.Data.deps.json
+D:\POS\Git_NONCSD_POS_API\Non CSD API - Chandan (Working)\NonCSDApplication\POS.Data\bin\Debug\net7.0\POS.Data.dll
+D:\POS\Git_NONCSD_POS_API\Non CSD API - Chandan (Working)\NonCSDApplication\POS.Data\bin\Debug\net7.0\POS.Data.pdb
+D:\POS\Git_NONCSD_POS_API\Non CSD API - Chandan (Working)\NonCSDApplication\POS.Data\bin\Debug\net7.0\POS.Helper.dll
+D:\POS\Git_NONCSD_POS_API\Non CSD API - Chandan (Working)\NonCSDApplication\POS.Data\bin\Debug\net7.0\POS.Helper.pdb
+D:\POS\Git_NONCSD_POS_API\Non CSD API - Chandan (Working)\NonCSDApplication\POS.Data\obj\Debug\net7.0\POS.Data.csproj.AssemblyReference.cache
+D:\POS\Git_NONCSD_POS_API\Non CSD API - Chandan (Working)\NonCSDApplication\POS.Data\obj\Debug\net7.0\POS.Data.GeneratedMSBuildEditorConfig.editorconfig
+D:\POS\Git_NONCSD_POS_API\Non CSD API - Chandan (Working)\NonCSDApplication\POS.Data\obj\Debug\net7.0\POS.Data.AssemblyInfoInputs.cache
+D:\POS\Git_NONCSD_POS_API\Non CSD API - Chandan (Working)\NonCSDApplication\POS.Data\obj\Debug\net7.0\POS.Data.AssemblyInfo.cs
+D:\POS\Git_NONCSD_POS_API\Non CSD API - Chandan (Working)\NonCSDApplication\POS.Data\obj\Debug\net7.0\POS.Data.csproj.CoreCompileInputs.cache
+D:\POS\Git_NONCSD_POS_API\Non CSD API - Chandan (Working)\NonCSDApplication\POS.Data\obj\Debug\net7.0\POS.Data.csproj.CopyComplete
+D:\POS\Git_NONCSD_POS_API\Non CSD API - Chandan (Working)\NonCSDApplication\POS.Data\obj\Debug\net7.0\POS.Data.dll
+D:\POS\Git_NONCSD_POS_API\Non CSD API - Chandan (Working)\NonCSDApplication\POS.Data\obj\Debug\net7.0\refint\POS.Data.dll
+D:\POS\Git_NONCSD_POS_API\Non CSD API - Chandan (Working)\NonCSDApplication\POS.Data\obj\Debug\net7.0\POS.Data.pdb
+D:\POS\Git_NONCSD_POS_API\Non CSD API - Chandan (Working)\NonCSDApplication\POS.Data\obj\Debug\net7.0\ref\POS.Data.dll

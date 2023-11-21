@@ -51,6 +51,12 @@ namespace POS.Repository
                     .Where(c => c.Frequency == reminderResource.Frequency);
             }
 
+            if (reminderResource.CustomerId.HasValue)
+            {
+                collectionBeforePaging = collectionBeforePaging
+                    .Where(c => c.CustomerId == reminderResource.CustomerId);
+            }
+
             var reminders = new ReminderList();
             return await reminders.Create(
                 collectionBeforePaging,

@@ -1,0 +1,25 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\POS\\Git_NONCSD_POS_API\\Non CSD API - Chandan (Working)\\NonCSDApplication\\POS.API\\wwwroot\\Users\\no-image-found.png",
+      "PackagePath": "staticwebassets\\Users\\no-image-found.png"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.POS.API.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.POS.API.props",
+      "PackagePath": "build\\POS.API.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.POS.API.props",
+      "PackagePath": "buildMultiTargeting\\POS.API.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.POS.API.props",
+      "PackagePath": "buildTransitive\\POS.API.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

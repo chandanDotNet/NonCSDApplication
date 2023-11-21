@@ -48,7 +48,7 @@ namespace POS.MediatR.Handlers
                     UserId = Guid.Parse(_userInfoToken.Id)
                 });
             }
-            var reminder = _mapper.Map<Reminder>(request);
+            var reminder = _mapper.Map<POS.Data.Reminder>(request);
             _reminderRepository.Add(reminder);
             if (await _uow.SaveAsync() <= 0)
             {

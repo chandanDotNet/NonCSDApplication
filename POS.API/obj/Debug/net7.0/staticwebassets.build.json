@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "Hash": "/dMdFXNH/yvVsKek/iGCOCM7/0oKVccLQPmkinPJnEo=",
+  "Source": "POS.API",
+  "BasePath": "_content/POS.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "POS.API\\wwwroot",
+      "Source": "POS.API",
+      "ContentRoot": "D:\\POS\\Git_NONCSD_POS_API\\Non CSD API - Chandan (Working)\\NonCSDApplication\\POS.API\\wwwroot\\",
+      "BasePath": "_content/POS.API",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "D:\\POS\\Git_NONCSD_POS_API\\Non CSD API - Chandan (Working)\\NonCSDApplication\\POS.API\\wwwroot\\Users\\no-image-found.png",
+      "SourceId": "POS.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\POS\\Git_NONCSD_POS_API\\Non CSD API - Chandan (Working)\\NonCSDApplication\\POS.API\\wwwroot\\",
+      "BasePath": "_content/POS.API",
+      "RelativePath": "Users/no-image-found.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Users\\no-image-found.png"
+    }
+  ]
+}

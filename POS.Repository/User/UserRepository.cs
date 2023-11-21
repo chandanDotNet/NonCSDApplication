@@ -86,6 +86,7 @@ namespace POS.Repository
             var claims = appClaimDtos.Select(c => new Claim(c.ClaimType, c.ClaimValue)).ToList();
             // Set JWT bearer token
             ret.BearerToken = BuildJwtToken(ret, claims, appUser.Id);
+            
             return ret;
         }
 
@@ -132,7 +133,7 @@ namespace POS.Repository
                           SecurityAlgorithms.HmacSha256)
             );
             // Create a string representation of the Jwt token
-            return new JwtSecurityTokenHandler().WriteToken(token); ;
+            return new JwtSecurityTokenHandler().WriteToken(token); 
         }
     }
 }

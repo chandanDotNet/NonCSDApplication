@@ -44,13 +44,13 @@ namespace POS.MediatR.CustomerAddress.Handlers
 
         public async Task<ServiceResponse<CustomerAddressDto>> Handle(UpdateCustomerAddressCommand request, CancellationToken cancellationToken)
         {
-            var entityExist = await _customerAddressRepository.FindBy(c => c.HouseNo == request.HouseNo && c.Id != request.Id)
+            var entityExist = await _customerAddressRepository.FindBy(c => c.Id != request.Id)
              .FirstOrDefaultAsync();
-            if (entityExist != null)
-            {
-                _logger.LogError("Customer Address Already Exist.");
-                return ServiceResponse<CustomerAddressDto>.Return409("Customer Address Already Exist.");
-            }
+            //if (entityExist != null)
+            //{
+            //    _logger.LogError("Customer Address Already Exist.");
+            //    return ServiceResponse<CustomerAddressDto>.Return409("Customer Address Already Exist.");
+            //}
             entityExist = await _customerAddressRepository.FindBy(v => v.Id == request.Id).FirstOrDefaultAsync();
             entityExist.HouseNo = request.HouseNo;
             entityExist.StreetDetails = request.StreetDetails;
