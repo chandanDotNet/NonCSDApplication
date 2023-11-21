@@ -3035,19 +3035,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\siddiqui.rahil\\.nuget\\packages\\": {}
+    "C:\\Users\\chandan.mandal\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\POS\\Git_NONCSD_POS_API\\Non CSD API - Chandan (Working)\\NonCSDApplication\\POS.Repository\\POS.Repository.csproj",
+      "projectUniqueName": "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.Repository\\POS.Repository.csproj",
       "projectName": "POS.Repository",
-      "projectPath": "D:\\POS\\Git_NONCSD_POS_API\\Non CSD API - Chandan (Working)\\NonCSDApplication\\POS.Repository\\POS.Repository.csproj",
-      "packagesPath": "C:\\Users\\siddiqui.rahil\\.nuget\\packages\\",
-      "outputPath": "D:\\POS\\Git_NONCSD_POS_API\\Non CSD API - Chandan (Working)\\NonCSDApplication\\POS.Repository\\obj\\",
+      "projectPath": "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.Repository\\POS.Repository.csproj",
+      "packagesPath": "C:\\Users\\chandan.mandal\\.nuget\\packages\\",
+      "outputPath": "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.Repository\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\siddiqui.rahil\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\chandan.mandal\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3055,23 +3060,24 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "D:\\POS\\Git_NONCSD_POS_API\\Non CSD API - Chandan (Working)\\NonCSDApplication\\POS.Common\\POS.Common.csproj": {
-              "projectPath": "D:\\POS\\Git_NONCSD_POS_API\\Non CSD API - Chandan (Working)\\NonCSDApplication\\POS.Common\\POS.Common.csproj"
+            "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.Common\\POS.Common.csproj": {
+              "projectPath": "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.Common\\POS.Common.csproj"
             },
-            "D:\\POS\\Git_NONCSD_POS_API\\Non CSD API - Chandan (Working)\\NonCSDApplication\\POS.Data\\POS.Data.csproj": {
-              "projectPath": "D:\\POS\\Git_NONCSD_POS_API\\Non CSD API - Chandan (Working)\\NonCSDApplication\\POS.Data\\POS.Data.csproj"
+            "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.Data\\POS.Data.csproj": {
+              "projectPath": "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.Data\\POS.Data.csproj"
             },
-            "D:\\POS\\Git_NONCSD_POS_API\\Non CSD API - Chandan (Working)\\NonCSDApplication\\POS.Domain\\POS.Domain.csproj": {
-              "projectPath": "D:\\POS\\Git_NONCSD_POS_API\\Non CSD API - Chandan (Working)\\NonCSDApplication\\POS.Domain\\POS.Domain.csproj"
+            "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.Domain\\POS.Domain.csproj": {
+              "projectPath": "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.Domain\\POS.Domain.csproj"
             },
-            "D:\\POS\\Git_NONCSD_POS_API\\Non CSD API - Chandan (Working)\\NonCSDApplication\\POS.Helper\\POS.Helper.csproj": {
-              "projectPath": "D:\\POS\\Git_NONCSD_POS_API\\Non CSD API - Chandan (Working)\\NonCSDApplication\\POS.Helper\\POS.Helper.csproj"
+            "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.Helper\\POS.Helper.csproj": {
+              "projectPath": "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.Helper\\POS.Helper.csproj"
             }
           }
         }
@@ -3115,11 +3121,7 @@
             "privateAssets": "all"
           }
         },
-<<<<<<< HEAD
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.311\\RuntimeIdentifierGraph.json"
-=======
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
->>>>>>> ba61f17de03ca0bf4b2e407d19310c661c2835b8
       }
     }
   }

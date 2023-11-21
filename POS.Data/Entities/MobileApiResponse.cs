@@ -166,7 +166,7 @@ namespace POS.Data.Entities
         public int TotalCount { get; set; }
         public IList<ReminderDto> Data { get; set; }
     }
-}
+
 
     public class CustomerOrderDetailsResponseData
     {
