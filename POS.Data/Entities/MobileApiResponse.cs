@@ -34,10 +34,10 @@ namespace POS.Data.Entities
         public bool status { get; set; }
         public int StatusCode { get; set; }
         public string message { get; set; }
-        public int Skip { get;  set; }
-        public int TotalPages { get;  set; }
-        public int PageSize { get;  set; }
-        public int TotalCount { get;  set; }
+        public int Skip { get; set; }
+        public int TotalPages { get; set; }
+        public int PageSize { get; set; }
+        public int TotalCount { get; set; }
         public IList<ProductDto> Data { get; set; }
     }
 
@@ -45,14 +45,14 @@ namespace POS.Data.Entities
     {
         public bool status { get; set; }
         public int StatusCode { get; set; }
-        public string message { get; set; }       
+        public string message { get; set; }
         public ProductDto Data { get; set; }
     }
 
     public class ProductDetailsRequestData
     {
         public string Id { get; set; }
-        
+
     }
 
     public class ProductCategoriesResponseData
@@ -68,7 +68,7 @@ namespace POS.Data.Entities
         public bool status { get; set; }
         public int StatusCode { get; set; }
         public string message { get; set; }
-        
+
     }
 
     public class CartListResponseData
@@ -113,7 +113,7 @@ namespace POS.Data.Entities
         public IList<WishlistDto> Data { get; set; }
     }
 
-    
+
 
     public class PaymentCardResponseData
     {
@@ -133,6 +133,26 @@ namespace POS.Data.Entities
         public int PageSize { get; set; }
         public int TotalCount { get; set; }
         public IList<PaymentCardDto> Data { get; set; }
+    }
+
+    public class CustomerProfileResponseData
+    {
+        public bool status { get; set; }
+        public int StatusCode { get; set; }
+        public string message { get; set; }
+        public CustomerDto Data { get; set; }
+    }
+
+    public class CustomerOrderListResponseData
+    {
+        public bool status { get; set; }
+        public int StatusCode { get; set; }
+        public string message { get; set; }
+        public int Skip { get; set; }
+        public int TotalPages { get; set; }
+        public int PageSize { get; set; }
+        public int TotalCount { get; set; }
+        public IList<SalesOrderDto> Data { get; set; }
     }
 
     public class ReminderListResponseData
@@ -155,5 +175,32 @@ namespace POS.Data.Entities
         public string Data { get; set; }
     }
 }
+
+
+    public class CustomerOrderDetailsResponseData
+    {
+        public bool status { get; set; }
+        public int StatusCode { get; set; }
+        public string message { get; set; }
+        public SalesOrderDto Data { get; set; }
+    }
+    public class CustomerOrderSummaryResponseData
+    {
+        public bool status { get; set; }
+        public int StatusCode { get; set; }
+        public string message { get; set; }
+        public OrderSummary Data { get; set; }
+    }
+
+    public class OrderSummary
+    {
+        public decimal Price { get; set; }
+        public decimal Discount { get; set; }
+        public decimal Items { get; set; }
+        public decimal DeliveryCharges { get; set; }
+    }
+
+}
+
 
 

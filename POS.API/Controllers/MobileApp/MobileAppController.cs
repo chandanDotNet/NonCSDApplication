@@ -28,6 +28,7 @@ using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Text;
 using POS.MediatR.Reminder.Commands;
+using POS.MediatR.SalesOrder.Commands;
 
 namespace POS.API.Controllers.MobileApp
 {
@@ -42,6 +43,8 @@ namespace POS.API.Controllers.MobileApp
         {
             _mediator = mediator;
         }
+
+
 
         /// <summary>
         /// Login customers.       
@@ -394,6 +397,11 @@ namespace POS.API.Controllers.MobileApp
                     response.PageSize = result.PageSize;
                     response.Skip = result.Skip;
                     response.TotalPages = result.TotalPages;
+
+                    var price = result.Sum(x => x.Total);
+                    var discount = result.Sum(x => x.Discount);
+                    var items = result.Sum(x => x.Quantity);
+                    var deliveryCharges = 0;
 
                     response.status = true;
                     response.StatusCode = 1;
@@ -887,6 +895,164 @@ namespace POS.API.Controllers.MobileApp
             return Ok(response);
         }
 
+
+        /// <summary>
+        /// Gets the customer profile.
+        /// </summary>
+        /// <param name="customerQuery">The identifier.</param>
+        /// <returns></returns>
+        [HttpPost("GetCustomerProfile")]
+        public async Task<IActionResult> GetCustomerProfile(GetCustomerQuery customerQuery)
+        {
+            CustomerProfileResponseData response = new CustomerProfileResponseData();
+            var query = new GetCustomerQuery { Id = customerQuery.Id };
+            var result = await _mediator.Send(query);
+
+            if (result != null)
+            {
+                response.status = true;
+                response.StatusCode = 1;
+                response.message = "Success";
+                response.Data = result.Data;
+            }
+            else
+            {
+                response.status = false;
+                response.StatusCode = 0;
+                response.message = "Invalid";
+            }
+            return Ok(response);
+        }
+
+
+        /// <summary>
+        /// Updates the customer Profile.
+        /// </summary>       
+        /// <param name="updateCustomerCommand">The update customer Profile command.</param>
+        /// <returns></returns>
+        [HttpPut("UpdateCustomerProfile"), DisableRequestSizeLimit]
+        public async Task<IActionResult> UpdateCustomerProfile(UpdateCustomerCommand updateCustomerCommand)
+        {
+            IUDResponseData response = new IUDResponseData();
+            // updateCustomerCommand.Id = id;
+            var result = await _mediator.Send(updateCustomerCommand);
+            if (result.Success)
+            {
+                response.status = true;
+                response.StatusCode = 1;
+                response.message = "Success";
+            }
+            else
+            {
+                response.status = false;
+                response.StatusCode = 0;
+                response.message = "Invalid";
+
+            }
+            return Ok(response);
+        }
+
+        /// <summary>
+        /// Gets all customer's order list.
+        /// </summary>
+        /// <param name="salesOrderResource">The update customer Profile command.</param>
+        /// <returns></returns>
+        [HttpPost("GetAllCustomerOrderList")]
+        [Produces("application/json", "application/xml", Type = typeof(List<SalesOrderDto>))]
+        public async Task<IActionResult> GetAllCustomerOrderList(SalesOrderResource salesOrderResource)
+        {
+            CustomerOrderListResponseData response = new CustomerOrderListResponseData();
+            var getAllSalesOrderQuery = new GetAllSalesOrderCommand
+            {
+                SalesOrderResource = salesOrderResource
+            };
+            var result = await _mediator.Send(getAllSalesOrderQuery);
+
+            if (result.Count > 0)
+            {
+                response.TotalCount = result.TotalCount;
+                response.PageSize = result.PageSize;
+                response.Skip = result.Skip;
+                response.TotalPages = result.TotalPages;
+
+                response.status = true;
+                response.StatusCode = 1;
+                response.message = "Success";
+                response.Data = result;
+            }
+            else
+            {
+                response.status = false;
+                response.StatusCode = 0;
+                response.message = "Invalid";
+                response.Data = result;
+            }
+
+            return Ok(response);
+        }
+
+
+        /// <summary>
+        /// Get Sales Order Details.
+        /// </summary>
+        /// <param name="salesOrderCommand"></param>
+        /// <returns></returns>
+        [HttpPost("GetCustomerOrderDetails")]
+        [Produces("application/json", "application/xml", Type = typeof(List<SalesOrderDto>))]
+        public async Task<IActionResult> GetCustomerOrderDetails(GetSalesOrderCommand salesOrderCommand)
+        {
+            CustomerOrderDetailsResponseData response = new CustomerOrderDetailsResponseData();
+            var getSalesOrderQuery = new GetSalesOrderCommand
+            {
+                Id = salesOrderCommand.Id
+            };
+            var result = await _mediator.Send(getSalesOrderQuery);
+
+            if (result.Success)
+            {
+                response.status = true;
+                response.StatusCode = 1;
+                response.message = "Success";
+                response.Data = result.Data;
+            }
+            else
+            {
+                response.status = false;
+                response.StatusCode = 0;
+                response.message = "Invalid";
+                response.Data = new SalesOrderDto { };
+            }
+
+            return Ok(response);
+        }
+
+
+        /// <summary>
+        /// Creates the Customer sales order.
+        /// </summary>
+        /// <param name="addCustomerSalesOrderCommand">The add sales order command.</param>
+        /// <returns></returns>
+        [HttpPost("CreateCustomerSalesOrder")]
+        [Produces("application/json", "application/xml", Type = typeof(SalesOrderDto))]
+        public async Task<IActionResult> CreateCustomerSalesOrder(AddSalesOrderCommand addCustomerSalesOrderCommand)
+        {
+            IUDResponseData response = new IUDResponseData();
+            var result = await _mediator.Send(addCustomerSalesOrderCommand);
+            if (result.Success)
+            {
+                response.status = true;
+                response.StatusCode = 1;
+                response.message = "Success";
+            }
+            else
+            {
+                response.status = false;
+                response.StatusCode = 0;
+                response.message = "Invalid";
+            }
+            return Ok(response);
+        }
+
         /// <summary>
         /// Get Customer Notifications.
         /// </summary>
@@ -933,6 +1099,87 @@ namespace POS.API.Controllers.MobileApp
                 response.message = "Invalid";
             }
 
+            return Ok(response);
+
+        }
+
+
+        /// <summary>
+        /// Update the Customer Sales order return.
+        /// </summary>
+        /// <param name="UpdateSalesOrderReturnCommand">The update customer Sales order command.</param>
+        /// <returns></returns>
+        [HttpPut("CustomerSalesOrderReturn/{id}")]
+        [Produces("application/json", "application/xml")]
+        public async Task<IActionResult> UpdateCustomerSalesOrderReturn(Guid id, UpdateSalesOrderReturnCommand updateSalesOrderReturnCommand)
+        {
+            IUDResponseData response = new IUDResponseData();
+            var result = await _mediator.Send(updateSalesOrderReturnCommand);
+            if (result.Success)
+            {
+                response.status = true;
+                response.StatusCode = 1;
+                response.message = "Success";
+            }
+            else
+            {
+                response.status = false;
+                response.StatusCode = 0;
+                response.message = "Invalid";
+            }
+            return Ok(response);
+        }
+
+        /// <summary>
+        /// Get Order Summary
+        /// </summary>
+        /// <param name="cartResource"></param>
+        /// <returns></returns>
+        [HttpPost("GetOrderSummary")]
+        public async Task<IActionResult> GetOrderSummary(CartResource cartResource)
+        {
+
+            CustomerOrderSummaryResponseData response = new CustomerOrderSummaryResponseData();
+
+            try
+            {
+                var query = new GetAllCartQuery
+                {
+                    CartResource = cartResource
+                };
+                var result = await _mediator.Send(query);
+
+                if (result.Count > 0)
+                {
+
+                    var Data = new OrderSummary
+                    {
+                        Price = result.Sum(x => x.Total),
+                        Discount = result.Sum(x => x.Discount),
+                        DeliveryCharges = 0,
+                        Items = result.Sum(x => x.Quantity),
+                    };                    
+
+                    response.status = true;
+                    response.StatusCode = 1;
+                    response.message = "Success";
+                    response.Data = Data;
+                }
+                else
+                {
+                    response.status = false;
+                    response.StatusCode = 0;
+                    response.message = "Invalid";
+                    response.Data = new OrderSummary { };
+                }
+
+            }
+            catch (Exception ex)
+            {
+                response.status = false;
+                response.StatusCode = 0;
+                response.message = ex.Message;
+            }
             return Ok(response);
         }
 
