@@ -960,6 +960,11 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="M:POS.API.Controllers.MobileApp.MobileAppController.Logout(System.String)">
+            <summary>
+            Logout.
+            </summary>
+        </member>
         <member name="M:POS.API.Controllers.NewsletterSubscriber.NewsletterSubscriberController.CreateNewsletterSubscriber(POS.MediatR.CommandAndQuery.AddNewsletterSubscriberCommand)">
             <summary>
             Creates the newsletter subscriber.

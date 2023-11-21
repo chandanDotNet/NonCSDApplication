@@ -935,5 +935,19 @@ namespace POS.API.Controllers.MobileApp
 
             return Ok(response);
         }
+
+        /// <summary>
+        /// Logout.
+        /// </summary>
+        [HttpPost("Logout")]
+        public async Task<IActionResult> Logout(string token)
+        {
+            LogoutResponseData response = new LogoutResponseData();
+            response.status = true;
+            response.StatusCode = 1;
+            response.message = "Success";
+            response.Data = "Logout Successfully";
+            return Ok(response);
+        }
     }
 }
