@@ -167,6 +167,15 @@ namespace POS.Data.Entities
         public IList<ReminderDto> Data { get; set; }
     }
 
+    public class LogoutResponseData
+    {
+        public bool status { get; set; }
+        public int StatusCode { get; set; }
+        public string message { get; set; }
+        public string Data { get; set; }
+    }
+}
+
 
     public class CustomerOrderDetailsResponseData
     {
