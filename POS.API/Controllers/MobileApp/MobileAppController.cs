@@ -23,7 +23,11 @@ using POS.MediatR.CustomerAddress.Commands;
 using POS.MediatR.Country.Commands;
 using POS.MediatR.Cart;
 using POS.MediatR.PaymentCard.Commands;
-using POS.MediatR.SalesOrder.Commands;
+using Microsoft.Extensions.Logging;
+using Microsoft.IdentityModel.Tokens;
+using System.IdentityModel.Tokens.Jwt;
+using System.Text;
+using POS.MediatR.Reminder.Commands;
 
 namespace POS.API.Controllers.MobileApp
 {
@@ -140,7 +144,6 @@ namespace POS.API.Controllers.MobileApp
 
         }
 
-
         /// <summary>
         /// Get Non CSD list.
         /// </summary>
@@ -171,7 +174,6 @@ namespace POS.API.Controllers.MobileApp
 
             return Ok(response);
         }
-
 
         /// <summary>
         /// Get All Products List.
@@ -225,7 +227,6 @@ namespace POS.API.Controllers.MobileApp
 
         }
 
-
         /// <summary>
         /// Get Product Details.
         /// </summary>       
@@ -276,7 +277,6 @@ namespace POS.API.Controllers.MobileApp
 
         }
 
-
         /// <summary>
         /// Get all Product Categories
         /// </summary>
@@ -314,8 +314,6 @@ namespace POS.API.Controllers.MobileApp
             return Ok(response);
         }
 
-
-
         /// <summary>
         /// Creates the cart.
         /// </summary>
@@ -343,7 +341,6 @@ namespace POS.API.Controllers.MobileApp
             }
             return Ok(response);
         }
-
 
         /// <summary>
         /// Updates the cart.
@@ -373,7 +370,6 @@ namespace POS.API.Controllers.MobileApp
             }
             return Ok(response);
         }
-
 
         /// <summary>
         /// Get All Cart List.
@@ -429,7 +425,6 @@ namespace POS.API.Controllers.MobileApp
             }
             return Ok(response);
         }
-
 
         /// <summary>
         /// Create Customer Address.
@@ -569,9 +564,7 @@ namespace POS.API.Controllers.MobileApp
             }
 
             return Ok(response);
-
         }
-
 
         /// <summary>
         /// Delete Cart By Id
@@ -642,7 +635,6 @@ namespace POS.API.Controllers.MobileApp
             return Ok(response);
         }
 
-
         //Wishlist-list
 
         /// <summary>
@@ -672,7 +664,6 @@ namespace POS.API.Controllers.MobileApp
             }
             return Ok(response);
         }
-
 
         /// <summary>
         /// Get All Cart List.
@@ -723,7 +714,6 @@ namespace POS.API.Controllers.MobileApp
             }
             return Ok(response);
         }
-
 
         /// <summary>
         /// Delete Wishlist By Id
@@ -795,7 +785,6 @@ namespace POS.API.Controllers.MobileApp
             return Ok(response);
         }
 
-
         /// <summary>
         /// Get Payment Cards
         /// </summary>
@@ -844,7 +833,6 @@ namespace POS.API.Controllers.MobileApp
             return Ok(response);
         }
 
-
         /// <summary>
         /// Delete CPayment Card.
         /// </summary>
@@ -853,8 +841,8 @@ namespace POS.API.Controllers.MobileApp
         [HttpDelete("PaymentCard/{id}")]
         public async Task<IActionResult> DeletePaymentCard(Guid Id)
         {
-            var deleteCustomerAddressCommand = new DeleteCustomerAddressCommand { Id = Id };
-            var result = await _mediator.Send(deleteCustomerAddressCommand);
+            var deletePaymentCardCommand = new DeletePaymentCardCommand { Id = Id };
+            var result = await _mediator.Send(deletePaymentCardCommand);
             //return ReturnFormattedResponse(result);            
             PaymentCardListResponseData response = new PaymentCardListResponseData();
             if (result.Success)
@@ -872,7 +860,6 @@ namespace POS.API.Controllers.MobileApp
             }
 
             return Ok(response);
-
         }
 
         /// <summary>
@@ -1062,6 +1049,55 @@ namespace POS.API.Controllers.MobileApp
                 response.StatusCode = 0;
                 response.message = "Invalid";
             }
+            return Ok(response);
+        }
+
+        /// <summary>
+        /// Get Customer Notifications.
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet("GetCustomerNotifications")]
+        public async Task<IActionResult> GetCustomerNotifications([FromQuery] ReminderResource reminderResource)
+        {
+            //var getUserNotificationCountQuery = new GetUserNotificationCountQuery { };
+            //var result = await _mediator.Send(getUserNotificationCountQuery);
+            //return Ok(result);
+            var getReminderNotificationQuery = new GetReminderNotificationQuery
+            {
+                ReminderResource = reminderResource
+            };
+            var result = await _mediator.Send(getReminderNotificationQuery);
+
+            var paginationMetadata = new
+            {
+                totalCount = result.TotalCount,
+                pageSize = result.PageSize,
+                skip = result.Skip,
+                totalPages = result.TotalPages
+            };
+            Response.Headers.Add("X-Pagination",
+                Newtonsoft.Json.JsonConvert.SerializeObject(paginationMetadata));
+
+            ReminderListResponseData response = new ReminderListResponseData();
+            if (result.Count > 0)
+            {
+                response.TotalCount = result.TotalCount;
+                response.PageSize = result.PageSize;
+                response.Skip = result.Skip;
+                response.TotalPages = result.TotalPages;
+
+                response.status = true;
+                response.StatusCode = 1;
+                response.message = "Success";
+                response.Data = result;
+            }
+            else
+            {
+                response.status = false;
+                response.StatusCode = 0;
+                response.message = "Invalid";
+            }
+
             return Ok(response);
 
         }

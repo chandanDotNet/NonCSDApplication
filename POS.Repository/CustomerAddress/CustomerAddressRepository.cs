@@ -32,7 +32,7 @@ namespace POS.Repository
         {
             var collectionBeforePaging =
                 AllIncluding(c => c.Customer).ApplySort(customerAddressResource.OrderBy,
-                _propertyMappingService.GetPropertyMapping<CustomerAddressDto, CustomerAddress>());
+                _propertyMappingService.GetPropertyMapping<CustomerAddressDto, CustomerAddress>());            
 
             if (!string.IsNullOrEmpty(customerAddressResource.CustomerId.ToString()))
             {

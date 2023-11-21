@@ -310,7 +310,7 @@ namespace POS.Repository
                 { "LandMark", new PropertyMappingValue(new List<string>() { "LandMark" } ) },
                 { "Type", new PropertyMappingValue(new List<string>() { "Type" } ) },
                 { "CustomerId", new PropertyMappingValue(new List<string>() { "CustomerId" } ) },
-                { "CustomerName", new PropertyMappingValue(new List<string>() { "Customer.CustomerName" } )},
+                { "CustomerName", new PropertyMappingValue(new List<string>() { "Customer.CustomerName" } )},                
           };
 
         private Dictionary<string, PropertyMappingValue> _wishlistMapping =
@@ -360,7 +360,8 @@ namespace POS.Repository
             propertyMappings.Add(new PropertyMapping<CustomerAddressDto, CustomerAddress>(_customerAddressPropertyMapping));
             propertyMappings.Add(new PropertyMapping<CartDto, Cart>(_cartMapping));
             propertyMappings.Add(new PropertyMapping<WishlistDto, Wishlist>(_wishlistMapping));
-            
+            //propertyMappings.Add(new PropertyMapping<CustomerAddressDto, CustomerAddress>(_cartMapping));
+            propertyMappings.Add(new PropertyMapping<PaymentCardDto, PaymentCard>(_paymentCardPropertyMapping));
         }
         public Dictionary<string, PropertyMappingValue> GetPropertyMapping
             <TSource, TDestination>()

@@ -954,6 +954,7 @@
             <param name="updatePaymentCardCommand"></param>
             <returns></returns>
         </member>
+<<<<<<< HEAD
         <member name="M:POS.API.Controllers.MobileApp.MobileAppController.GetCustomerProfile(POS.MediatR.CommandAndQuery.GetCustomerQuery)">
             <summary>
             Gets the customer profile.
@@ -1001,6 +1002,12 @@
             Get Order Summary
             </summary>
             <param name="cartResource"></param>
+=======
+        <member name="M:POS.API.Controllers.MobileApp.MobileAppController.GetCustomerNotifications(POS.Data.Resources.ReminderResource)">
+            <summary>
+            Get Customer Notifications.
+            </summary>
+>>>>>>> ba61f17de03ca0bf4b2e407d19310c661c2835b8
             <returns></returns>
         </member>
         <member name="M:POS.API.Controllers.NewsletterSubscriber.NewsletterSubscriberController.CreateNewsletterSubscriber(POS.MediatR.CommandAndQuery.AddNewsletterSubscriberCommand)">

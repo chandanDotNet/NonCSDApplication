@@ -80,10 +80,12 @@ namespace POS.MediatR.Handlers
                     Id = authUser.Id.ToString()
                 };
                 await _hubContext.Clients.All.Joined(onlineUser);
+
                 if (!string.IsNullOrWhiteSpace(authUser.ProfilePhoto))
                 {
                     authUser.ProfilePhoto = Path.Combine(_pathHelper.UserProfilePath, authUser.ProfilePhoto);
                 }
+
                 return ServiceResponse<UserAuthDto>.ReturnResultWith200(authUser);
             }
             else

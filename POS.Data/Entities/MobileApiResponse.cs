@@ -155,6 +155,19 @@ namespace POS.Data.Entities
         public IList<SalesOrderDto> Data { get; set; }
     }
 
+    public class ReminderListResponseData
+    {
+        public bool status { get; set; }
+        public int StatusCode { get; set; }
+        public string message { get; set; }
+        public int Skip { get; set; }
+        public int TotalPages { get; set; }
+        public int PageSize { get; set; }
+        public int TotalCount { get; set; }
+        public IList<ReminderDto> Data { get; set; }
+    }
+}
+
     public class CustomerOrderDetailsResponseData
     {
         public bool status { get; set; }

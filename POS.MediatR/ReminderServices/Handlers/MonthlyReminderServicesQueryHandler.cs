@@ -28,7 +28,7 @@ namespace POS.MediatR.Handlers
         }
         public async Task<bool> Handle(MonthlyReminderServicesQuery request, CancellationToken cancellationToken)
         {
-            List<Reminder> reminders = new();
+            List<POS.Data.Reminder> reminders = new();
             var currentDate = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, DateTime.Now.Hour, DateTime.Now.Minute, DateTime.Now.Second).ToUniversalTime();
             var lastDayOfMonth = LastDayOfMonth(currentDate);
             if (lastDayOfMonth == 28)

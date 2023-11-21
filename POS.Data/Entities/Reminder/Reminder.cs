@@ -20,5 +20,6 @@ namespace POS.Data
         public ICollection<HalfYearlyReminder> HalfYearlyReminders { get; set; }
         public ICollection<QuarterlyReminder> QuarterlyReminders { get; set; }
         public ICollection<DailyReminder> DailyReminders { get; set; }
+        public Guid? CustomerId { get; set; }
     }
 }
