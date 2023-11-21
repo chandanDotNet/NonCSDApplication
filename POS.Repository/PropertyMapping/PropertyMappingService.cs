@@ -360,7 +360,7 @@ namespace POS.Repository
             propertyMappings.Add(new PropertyMapping<CustomerAddressDto, CustomerAddress>(_customerAddressPropertyMapping));
             propertyMappings.Add(new PropertyMapping<CartDto, Cart>(_cartMapping));
             propertyMappings.Add(new PropertyMapping<WishlistDto, Wishlist>(_wishlistMapping));
-            propertyMappings.Add(new PropertyMapping<CustomerAddressDto, CustomerAddress>(_cartMapping));
+            
         }
         public Dictionary<string, PropertyMappingValue> GetPropertyMapping
             <TSource, TDestination>()

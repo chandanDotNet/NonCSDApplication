@@ -23,6 +23,7 @@ namespace POS.Data
         public decimal TotalTax { get; set; }
         public decimal TotalDiscount { get; set; }
         public decimal TotalPaidAmount { get; set; }
+        public decimal DeliveryCharges { get; set; }
         public PaymentStatus PaymentStatus { get; set; }
         public List<SalesOrderItem> SalesOrderItems { get; set; }
         public List<SalesOrderPayment> SalesOrderPayments { get; set; }
