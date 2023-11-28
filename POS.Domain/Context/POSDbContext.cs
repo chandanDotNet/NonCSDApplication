@@ -78,6 +78,10 @@ namespace POS.Domain
 
         public DbSet<PaymentCard> PaymentCards { get; set; }
 
+        public DbSet<Banner> Banners { get; set; }
+
+        public DbSet<LoginPageBanner> LoginPageBanners { get; set; }
+
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
@@ -506,6 +510,32 @@ namespace POS.Domain
                     .WithMany()
                     .HasForeignKey(ur => ur.CreatedBy)
                     .OnDelete(DeleteBehavior.Restrict);
+            });
+
+            builder.Entity<Banner>(b =>
+            {
+                b.HasOne(e => e.CreatedByUser)
+                    .WithMany()
+                    .HasForeignKey(ur => ur.CreatedBy)
+                    .OnDelete(DeleteBehavior.Restrict);
+            });
+
+            builder.Entity<LoginPageBanner>(b =>
+            {
+                b.HasOne(e => e.CreatedByUser)
+                    .WithMany()
+                    .HasForeignKey(ur => ur.CreatedBy)
+                    .OnDelete(DeleteBehavior.Restrict);
+            });
+
+            builder.Entity<Data.Page>(b =>
+            {
+                // Each User can have many UserClaims
+                b.HasMany(e => e.Actions)
+                    .WithOne(e => e.Page)
+                    .HasForeignKey(uc => uc.PageId)
+                    .OnDelete(DeleteBehavior.Restrict)
+                    .IsRequired();
             });
 
 

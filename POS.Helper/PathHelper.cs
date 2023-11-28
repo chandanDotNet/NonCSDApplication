@@ -20,6 +20,22 @@ namespace POS.Helper
             }
         }
 
+        public string BannerImagePath
+        {
+            get
+            {
+                return _configuration["ImagePathSettings:BannerImages"];
+            }
+        }
+
+        public string LoginPageBannerImagePath
+        {
+            get
+            {
+                return _configuration["ImagePathSettings:LoginPageBannerImages"];
+            }
+        }
+
         public string BrandImagePath
         {
             get

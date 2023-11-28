@@ -15,7 +15,7 @@ namespace POS.Data.Dto
         public string ProfilePhoto { get; set; }
         public string Provider { get; set; }
         public bool IsActive { get; set; }
-        public int CounterId { get; set; }
+        public Guid? CounterId { get; set; }
         public List<UserRoleDto> UserRoles { get; set; } = new List<UserRoleDto>();
         public List<UserClaimDto> UserClaims { get; set; } = new List<UserClaimDto>();
 

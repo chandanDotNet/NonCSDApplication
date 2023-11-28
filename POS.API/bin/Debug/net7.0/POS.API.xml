@@ -162,6 +162,12 @@
             <param name="addCounterCommand"></param>
             <returns></returns>
         </member>
+        <member name="M:POS.API.Controllers.Counter.CounterController.GetCounters">
+            <summary>
+            Get Counters.
+            </summary>
+            <returns></returns>
+        </member>
         <member name="M:POS.API.Controllers.Country.CountryController.GetCountry(System.Guid)">
             <summary>
             Get Country.
@@ -995,12 +1001,6 @@
             </summary>
             <returns></returns>
         </member>
-<<<<<<< HEAD
-        <member name="M:POS.API.Controllers.MobileApp.MobileAppController.Logout(System.String)">
-            <summary>
-            Logout.
-            </summary>
-=======
         <member name="M:POS.API.Controllers.MobileApp.MobileAppController.UpdateCustomerSalesOrderReturn(System.Guid,POS.MediatR.SalesOrder.Commands.UpdateSalesOrderReturnCommand)">
             <summary>
             Update the Customer Sales order return.
@@ -1014,7 +1014,32 @@
             </summary>
             <param name="cartResource"></param>
             <returns></returns>
->>>>>>> f9b52836126c84812b94c676c01b4674871ba14e
+        </member>
+        <member name="M:POS.API.Controllers.MobileApp.MobileAppController.AddBanner(POS.MediatR.Banner.Command.AddBannerCommand)">
+            <summary>
+            Add Banner.
+            </summary>
+            <param name="addBannerCommand"></param>
+            <returns></returns>
+        </member>
+        <member name="M:POS.API.Controllers.MobileApp.MobileAppController.GetBanners">
+            <summary>
+            Get Banners.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:POS.API.Controllers.MobileApp.MobileAppController.AddLoginPageBanner(POS.MediatR.Banner.Command.AddLoginPageBannerCommand)">
+            <summary>
+            Add Login Page Banner.
+            </summary>
+            <param name="addLoginPageBannerCommand"></param>
+            <returns></returns>
+        </member>
+        <member name="M:POS.API.Controllers.MobileApp.MobileAppController.GetLoginPageBanners">
+            <summary>
+            Get Login Page Banners.
+            </summary>
+            <returns></returns>
         </member>
         <member name="M:POS.API.Controllers.NewsletterSubscriber.NewsletterSubscriberController.CreateNewsletterSubscriber(POS.MediatR.CommandAndQuery.AddNewsletterSubscriberCommand)">
             <summary>

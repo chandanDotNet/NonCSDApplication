@@ -174,8 +174,6 @@ namespace POS.Data.Entities
         public string message { get; set; }
         public string Data { get; set; }
     }
-}
-
 
     public class CustomerOrderDetailsResponseData
     {
@@ -200,6 +198,29 @@ namespace POS.Data.Entities
         public decimal DeliveryCharges { get; set; }
     }
 
+    public class BannerListResponseData
+    {
+        public bool status { get; set; }
+        public int StatusCode { get; set; }
+        public string message { get; set; }
+        public int Skip { get; set; }
+        public int TotalPages { get; set; }
+        public int PageSize { get; set; }
+        public int TotalCount { get; set; }
+        public IList<BannerDto> Data { get; set; }
+    }
+
+    public class LoginPageBannerListResponseData
+    {
+        public bool status { get; set; }
+        public int StatusCode { get; set; }
+        public string message { get; set; }
+        public int Skip { get; set; }
+        public int TotalPages { get; set; }
+        public int PageSize { get; set; }
+        public int TotalCount { get; set; }
+        public IList<LoginPageBannerDto> Data { get; set; }
+    }
 }
 
 

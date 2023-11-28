@@ -45,13 +45,18 @@ namespace POS.API.Controllers.Counter
             return ReturnFormattedResponse(result);
         }
 
-
-        
-
-
-
-        
-
+        /// <summary>
+        /// Get Counters.
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet("Counters")]
+        [Produces("application/json", "application/xml", Type = typeof(List<CounterDto>))]
+        public async Task<IActionResult> GetCounters()
+        {
+            var getAllCounterCommand = new GetAllCounterCommand { };
+            var result = await _mediator.Send(getAllCounterCommand);
+            return Ok(result);
+        }
 
         public class ResponseData1
         {

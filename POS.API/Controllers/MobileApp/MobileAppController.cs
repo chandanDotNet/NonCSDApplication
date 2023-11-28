@@ -29,6 +29,12 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Text;
 using POS.MediatR.Reminder.Commands;
 using POS.MediatR.SalesOrder.Commands;
+using POS.MediatR.Banner.Command;
+using POS.MediatR.Brand.Command;
+using System.Security.Claims;
+using System.Linq.Dynamic.Core.Tokenizer;
+using Newtonsoft.Json.Linq;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace POS.API.Controllers.MobileApp
 {
@@ -39,12 +45,11 @@ namespace POS.API.Controllers.MobileApp
     public class MobileAppController : BaseController
     {
         public IMediator _mediator { get; set; }
+
         public MobileAppController(IMediator mediator)
         {
             _mediator = mediator;
         }
-
-
 
         /// <summary>
         /// Login customers.       
@@ -1158,7 +1163,7 @@ namespace POS.API.Controllers.MobileApp
                         Discount = result.Sum(x => x.Discount),
                         DeliveryCharges = 0,
                         Items = result.Sum(x => x.Quantity),
-                    };                    
+                    };
 
                     response.status = true;
                     response.StatusCode = 1;
@@ -1183,17 +1188,151 @@ namespace POS.API.Controllers.MobileApp
             return Ok(response);
         }
 
+        [Authorize]
         /// <summary>
         /// Logout.
         /// </summary>
         [HttpPost("Logout")]
-        public async Task<IActionResult> Logout(string token)
+        public async Task<IActionResult> Logout()
         {
             LogoutResponseData response = new LogoutResponseData();
+            string token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJEQl9TVEFUSVNUSUNTIjoidHJ1ZSIsIkRCX0JFU1RfU0VMTElOR19QUk9TIjoidHJ1ZSIsIkRCX1JFTUlOREVSUyI6InRydWUiLCJEQl9MQVRFU1RfSU5RVUlSSUVTIjoidHJ1ZSIsIkRCX1JFQ0VOVF9TT19TSElQTUVOVCI6InRydWUiLCJEQl9SRUNFTlRfUE9fREVMSVZFUlkiOiJ0cnVlIiwiUFJPX1ZJRVdfUFJPRFVDVFMiOiJ0cnVlIiwiUFJPX0FERF9QUk9EVUNUIjoidHJ1ZSIsIlBST19VUERBVEVfUFJPRFVDVCI6InRydWUiLCJQUk9fREVMRVRFX1BST0RVQ1QiOiJ0cnVlIiwiUFJPX01BTkFHRV9QUk9fQ0FUIjoidHJ1ZSIsIlBST19NQU5BR0VfVEFYIjoidHJ1ZSIsIlBST19NQU5BR0VfVU5JVCI6InRydWUiLCJQUk9fTUFOQUdFX0JSQU5EIjoidHJ1ZSIsIlBST19NQU5BR0VfV0FSRUhPVVNFIjoidHJ1ZSIsIlNVUFBfVklFV19TVVBQTElFUlMiOiJ0cnVlIiwiU1VQUF9BRERfU1VQUExJRVIiOiJ0cnVlIiwiU1VQUF9VUERBVEVfU1VQUExJRVIiOiJ0cnVlIiwiU1VQUF9ERUxFVEVfU1VQUExJRVIiOiJ0cnVlIiwiQ1VTVF9WSUVXX0NVU1RPTUVSUyI6InRydWUiLCJDVVNUX0FERF9DVVNUT01FUiI6InRydWUiLCJDVVNUX1VQREFURV9DVVNUT01FUiI6InRydWUiLCJDVVNUX0RFTEVURV9DVVNUT01FUiI6InRydWUiLCJJTlFfVklFV19JTlFVSVJJRVMiOiJ0cnVlIiwiSU5RX0FERF9JTlFVSVJZIjoidHJ1ZSIsIklOUV9VUERBVEVfSU5RVUlSWSI6InRydWUiLCJJTlFfREVMRVRFX0lOUVVJUlkiOiJ0cnVlIiwiSU5RX01BTkFHRV9JTlFfU1RBVFVTIjoidHJ1ZSIsIklOUV9NQU5BR0VfSU5RX1NPVVJDRSI6InRydWUiLCJJTlFfTUFOQUdFX1JFTUlOREVSUyI6InRydWUiLCJQT1JfVklFV19QT19SRVFVRVNUUyI6InRydWUiLCJQT1JfQUREX1BPX1JFUVVFU1QiOiJ0cnVlIiwiUE9SX1VQREFURV9QT19SRVFVRVNUIjoidHJ1ZSIsIlBPUl9ERUxFVEVfUE9fUkVRVUVTVCI6InRydWUiLCJQT1JfQ09OVkVSVF9UT19QTyI6InRydWUiLCJQT1JfR0VORVJBVEVfSU5WT0lDRSI6InRydWUiLCJQT1JfUE9SX0RFVEFJTCI6InRydWUiLCJQT19WSUVXX1BVUkNIQVNFX09SREVSUyI6InRydWUiLCJQT19BRERfUE8iOiJ0cnVlIiwiUE9fVVBEQVRFX1BPIjoidHJ1ZSIsIlBPX0RFTEVURV9QTyI6InRydWUiLCJQT19WSUVXX1BPX0RFVEFJTCI6InRydWUiLCJQT19SRVRVUk5fUE8iOiJ0cnVlIiwiUE9fVklFV19QT19QQVlNRU5UUyI6InRydWUiLCJQT19BRERfUE9fUEFZTUVOVCI6InRydWUiLCJQT19ERUxFVEVfUE9fUEFZTUVOVCI6InRydWUiLCJQT19HRU5FUkFURV9JTlZPSUNFIjoidHJ1ZSIsIlNPX1ZJRVdfU0FMRVNfT1JERVJTIjoidHJ1ZSIsIlNPX0FERF9TTyI6InRydWUiLCJTT19VUERBVEVfU08iOiJ0cnVlIiwiU09fREVMRVRFX1NPIjoidHJ1ZSIsIlNPX1ZJRVdfU09fREVUQUlMIjoidHJ1ZSIsIlNPX1JFVFVSTl9TTyI6InRydWUiLCJTT19WSUVXX1NPX1BBWU1FTlRTIjoidHJ1ZSIsIlNPX0FERF9TT19QQVlNRU5UIjoidHJ1ZSIsIlNPX0RFTEVURV9TT19QQVlNRU5UIjoidHJ1ZSIsIlNPX0dFTkVSQVRFX0lOVk9JQ0UiOiJ0cnVlIiwiSU5WRV9WSUVXX0lOVkVOVE9SSUVTIjoidHJ1ZSIsIklOVkVfTUFOQUdFX0lOVkVOVE9SWSI6InRydWUiLCJFWFBfVklFV19FWFBFTlNFUyI6InRydWUiLCJFWFBfQUREX0VYUEVOU0UiOiJ0cnVlIiwiRVhQX1VQREFURV9FWFBFTlNFIjoidHJ1ZSIsIkVYUF9ERUxFVEVfRVhQRU5TRSI6InRydWUiLCJFWFBfTUFOQUdFX0VYUF9DQVRFR09SWSI6InRydWUiLCJSRVBfUE9fUkVQIjoidHJ1ZSIsIlJFUF9TT19SRVAiOiJ0cnVlIiwiUkVQX1BPX1BBWU1FTlRfUkVQIjoidHJ1ZSIsIlJFUF9FWFBFTlNFX1JFUCI6InRydWUiLCJSRVBfU09fUEFZTUVOVF9SRVAiOiJ0cnVlIiwiUkVQX1NBTEVTX1ZTX1BVUkNIQVNFX1JFUCI6InRydWUiLCJSRU1fVklFV19SRU1JTkRFUlMiOiJ0cnVlIiwiUkVNX0FERF9SRU1JTkRFUiI6InRydWUiLCJSRU1fVVBEQVRFX1JFTUlOREVSIjoidHJ1ZSIsIlJFTV9ERUxFVEVfUkVNSU5ERVIiOiJ0cnVlIiwiUk9MRVNfVklFV19ST0xFUyI6InRydWUiLCJST0xFU19BRERfUk9MRSI6InRydWUiLCJST0xFU19VUERBVEVfUk9MRSI6InRydWUiLCJST0xFU19ERUxFVEVfUk9MRSI6InRydWUiLCJVU1JfVklFV19VU0VSUyI6InRydWUiLCJVU1JfQUREX1VTRVIiOiJ0cnVlIiwiVVNSX1VQREFURV9VU0VSIjoidHJ1ZSIsIlVTUl9ERUxFVEVfVVNFUiI6InRydWUiLCJVU1JfUkVTRVRfUFdEIjoidHJ1ZSIsIlVTUl9BU1NJR05fVVNSX1JPTEVTIjoidHJ1ZSIsIlVTUl9BU1NJR05fVVNSX1BFUk1JU1NJT05TIjoidHJ1ZSIsIlVTUl9PTkxJTkVfVVNFUlMiOiJ0cnVlIiwiRU1BSUxfTUFOQUdFX0VNQUlMX1NNVFBfU0VUVElOUyI6InRydWUiLCJFTUFJTF9NQU5BR0VfRU1BSUxfVEVNUExBVEVTIjoidHJ1ZSIsIkVNQUlMX1NFTkRfRU1BSUwiOiJ0cnVlIiwiU0VUVF9VUERBVEVfQ09NX1BST0ZJTEUiOiJ0cnVlIiwiU0VUVF9NQU5BR0VfQ09VTlRSWSI6InRydWUiLCJTRVRUX01BTkFHRV9DSVRZIjoidHJ1ZSIsIkxPR1NfVklFV19MT0dJTl9BVURJVFMiOiJ0cnVlIiwiTE9HU19WSUVXX0VSUk9SX0xPR1MiOiJ0cnVlIiwiUkVQX1BST19QUF9SRVAiOiJ0cnVlIiwiUkVQX0NVU1RfUEFZTUVOVF9SRVAiOiJ0cnVlIiwiUkVQX1BST19TT19SRVBPUlQiOiJ0cnVlIiwiUkVQX1NVUF9QQVlNRU5UX1JFUCI6InRydWUiLCJSRVBfU1RPQ0tfUkVQT1JUIjoidHJ1ZSIsIlBPU19QT1MiOiJ0cnVlIiwiUkVQX1ZJRVdfV0FSX1JFUCI6InRydWUiLCJSRVBfVklFV19QUk9fTE9TU19SRVAiOiJ0cnVlIiwic3ViIjoiNGIzNTJiMzctMzMyYS00MGM2LWFiMDUtZTM4ZmNmMTA5NzE5IiwiRW1haWwiOiJhZG1pbkBnbWFpbC5jb20iLCJuYmYiOjE3MDEwODA0MjgsImV4cCI6MTcwMTEyMzYyOCwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MDAwIiwiYXVkIjoiUFRDVXNlcnMifQ.bZvhsh1KWB8xrO7JZh0Mral3RO0pdoevQamJyZJj9Yg";
+           
+            var principal = GetPrincipalFromExpiredToken(token);
+            var expClaim = principal.Claims.First(x => x.Type == "Email").Value;
+            var identity = principal.Identity as ClaimsIdentity;
+            var tok = identity.FindFirst("Token");
+            identity.RemoveClaim(identity.FindFirst("Token"));
+            //var existingClaim = identity.FindFirst(key);
             response.status = true;
             response.StatusCode = 1;
             response.message = "Success";
             response.Data = "Logout Successfully";
+            return Ok(response);
+        }
+
+        private ClaimsPrincipal GetPrincipalFromExpiredToken(string token)
+        {            
+            var tokenValidationParameters = new TokenValidationParameters
+            {
+                ValidateAudience = false, //you might want to validate the audience and issuer depending on your use case
+                ValidateIssuer = false,
+                ValidateIssuerSigningKey = true,
+                IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("This*Is&A!Long)Key(For%Creating@A$SymmetricKey")),
+                //ValidateLifetime = false, //here we are saying that we don't care about the token's expiration date               
+                ClockSkew = TimeSpan.Zero
+            };
+
+            var tokenHandler = new JwtSecurityTokenHandler();
+            SecurityToken securityToken;
+            var principal = tokenHandler.ValidateToken(token, tokenValidationParameters, out securityToken);
+            
+            var jwtSecurityToken = securityToken as JwtSecurityToken;
+            if (jwtSecurityToken == null || !jwtSecurityToken.Header.Alg.Equals(SecurityAlgorithms.HmacSha256, StringComparison.InvariantCultureIgnoreCase))
+                throw new SecurityTokenException("Invalid token");
+
+            return principal;
+        }
+
+        /// <summary>
+        /// Add Banner.
+        /// </summary>
+        /// <param name="addBannerCommand"></param>
+        /// <returns></returns>
+        [HttpPost("Banner")]
+        [Produces("application/json", "application/xml", Type = typeof(BannerDto))]
+        public async Task<IActionResult> AddBanner(AddBannerCommand addBannerCommand)
+        {
+            var response = await _mediator.Send(addBannerCommand);
+            if (!response.Success)
+            {
+                return ReturnFormattedResponse(response);
+            }
+            return CreatedAtAction("GetBanners", new { id = response.Data.Id }, response.Data);
+        }
+
+        /// <summary>
+        /// Get Banners.
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet("Banners")]
+        [Produces("application/json", "application/xml", Type = typeof(List<BannerDto>))]
+        public async Task<IActionResult> GetBanners()
+        {
+            BannerListResponseData response = new BannerListResponseData();
+            var getAllBannerCommand = new GetAllBannerCommand { };
+            var result = await _mediator.Send(getAllBannerCommand);
+
+            if (result.Count > 0)
+            {
+                //response.TotalCount = result.TotalCount;
+                //response.PageSize = result.PageSize;
+                //response.Skip = result.Skip;
+                //response.TotalPages = result.TotalPages;
+
+                response.status = true;
+                response.StatusCode = 1;
+                response.message = "Success";
+                response.Data = result;
+            }
+            else
+            {
+                response.status = false;
+                response.StatusCode = 0;
+                response.message = "Invalid";
+                response.Data = result;
+            }
+            return Ok(response);
+        }
+
+        /// <summary>
+        /// Add Login Page Banner.
+        /// </summary>
+        /// <param name="addLoginPageBannerCommand"></param>
+        /// <returns></returns>
+        [HttpPost("LoginPageBanner")]
+        [Produces("application/json", "application/xml", Type = typeof(LoginPageBannerDto))]
+        public async Task<IActionResult> AddLoginPageBanner(AddLoginPageBannerCommand addLoginPageBannerCommand)
+        {
+            var response = await _mediator.Send(addLoginPageBannerCommand);
+            if (!response.Success)
+            {
+                return ReturnFormattedResponse(response);
+            }
+            return CreatedAtAction("GetLoginPageBanners", new { id = response.Data.Id }, response.Data);
+        }
+
+        /// <summary>
+        /// Get Login Page Banners.
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet("LoginPageBanners")]
+        [Produces("application/json", "application/xml", Type = typeof(List<LoginPageBannerDto>))]
+        public async Task<IActionResult> GetLoginPageBanners()
+        {
+            LoginPageBannerListResponseData response = new LoginPageBannerListResponseData();
+            var getAllLoginPageBannerCommand = new GetAllLoginPageBannerCommand { };
+            var result = await _mediator.Send(getAllLoginPageBannerCommand);
+
+            if (result.Count > 0)
+            {
+                //response.TotalCount = result.TotalCount;
+                //response.PageSize = result.PageSize;
+                //response.Skip = result.Skip;
+                //response.TotalPages = result.TotalPages;
+
+                response.status = true;
+                response.StatusCode = 1;
+                response.message = "Success";
+                response.Data = result;
+            }
+            else
+            {
+                response.status = false;
+                response.StatusCode = 0;
+                response.message = "Invalid";
+                response.Data = result;
+            }
             return Ok(response);
         }
     }

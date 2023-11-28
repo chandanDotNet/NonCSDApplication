@@ -44,14 +44,14 @@ namespace POS.MediatR.CustomerAddress.Handlers
 
         public async Task<ServiceResponse<CustomerAddressDto>> Handle(UpdateCustomerAddressCommand request, CancellationToken cancellationToken)
         {
-            var entityExist = await _customerAddressRepository.FindBy(c => c.Id != request.Id)
+            var entityExist = await _customerAddressRepository.FindBy(c => c.Id == request.Id)
              .FirstOrDefaultAsync();
             //if (entityExist != null)
             //{
             //    _logger.LogError("Customer Address Already Exist.");
             //    return ServiceResponse<CustomerAddressDto>.Return409("Customer Address Already Exist.");
             //}
-            entityExist = await _customerAddressRepository.FindBy(v => v.Id == request.Id).FirstOrDefaultAsync();
+            //entityExist = await _customerAddressRepository.FindBy(v => v.Id == request.Id).FirstOrDefaultAsync();
             entityExist.HouseNo = request.HouseNo;
             entityExist.StreetDetails = request.StreetDetails;
             entityExist.LandMark = request.LandMark;
@@ -63,7 +63,7 @@ namespace POS.MediatR.CustomerAddress.Handlers
             //remove other as Primary Address
             if (entityExist.IsPrimary)
             {
-                var defaultPrimaryAddressSettings = await _customerAddressRepository.All.Where(c => c.CustomerId == request.CustomerId && c.IsPrimary).ToListAsync();
+                var defaultPrimaryAddressSettings = await _customerAddressRepository.All.Where(c => c.CustomerId == request.CustomerId && c.Id != request.Id && c.IsPrimary).ToListAsync();
                 defaultPrimaryAddressSettings.ForEach(c => c.IsPrimary = false);
                 _customerAddressRepository.UpdateRange(defaultPrimaryAddressSettings);
             }
