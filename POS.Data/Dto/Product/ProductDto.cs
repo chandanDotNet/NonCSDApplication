@@ -32,5 +32,6 @@ namespace POS.Data.Dto
         public UnitConversationDto Unit { get; set; }
         public List<ProductTaxDto> ProductTaxes { get; set; }
         public DateTime? CreatedDate { get; set; }
+        public CartDto Cart { get; set; }
     }
 }

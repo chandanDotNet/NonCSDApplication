@@ -68,6 +68,8 @@ namespace POS.Repository
                  DeliveryStatus = cs.DeliveryStatus,
                  DeliveryDate = cs.DeliveryDate,
                  DeliveryCharges = cs.DeliveryCharges,
+                 DeliveryAddressId = cs.DeliveryAddressId,
+                 DeliveryAddress = cs.DeliveryAddress,
                  TotalTax = cs.TotalTax,
                  CustomerName = cs.Customer.CustomerName,
                  Status = cs.Status,
@@ -94,11 +96,14 @@ namespace POS.Repository
                   DeliveryStatus = cs.DeliveryStatus,
                   DeliveryDate = cs.DeliveryDate,
                   DeliveryCharges = cs.DeliveryCharges,
+                  DeliveryAddressId = cs.DeliveryAddressId,
+                  DeliveryAddress = cs.DeliveryAddress,
                   TotalTax = cs.TotalTax,
                   CustomerName = cs.Customer.CustomerName,
                   Status = cs.Status,
                   PaymentStatus = cs.PaymentStatus,
                   TotalPaidAmount = cs.TotalPaidAmount
+                 // DeliveryAddress = cs.DeliveryAddress
               })
               .ToListAsync();
                 return entities;

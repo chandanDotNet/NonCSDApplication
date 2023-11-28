@@ -116,7 +116,6 @@ D:\Projects-2023\Dot Net\NonCSDApi2023\POS.API\obj\Debug\net7.0\POS.API.Generate
 D:\Projects-2023\Dot Net\NonCSDApi2023\POS.API\obj\Debug\net7.0\POS.API.AssemblyInfoInputs.cache
 D:\Projects-2023\Dot Net\NonCSDApi2023\POS.API\obj\Debug\net7.0\POS.API.AssemblyInfo.cs
 D:\Projects-2023\Dot Net\NonCSDApi2023\POS.API\obj\Debug\net7.0\POS.API.csproj.CoreCompileInputs.cache
-D:\Projects-2023\Dot Net\NonCSDApi2023\POS.API\obj\Debug\net7.0\POS.API.MvcApplicationPartsAssemblyInfo.cs
 D:\Projects-2023\Dot Net\NonCSDApi2023\POS.API\obj\Debug\net7.0\POS.API.MvcApplicationPartsAssemblyInfo.cache
 D:\Projects-2023\Dot Net\NonCSDApi2023\POS.API\obj\Debug\net7.0\staticwebassets\msbuild.POS.API.Microsoft.AspNetCore.StaticWebAssets.props
 D:\Projects-2023\Dot Net\NonCSDApi2023\POS.API\obj\Debug\net7.0\staticwebassets\msbuild.build.POS.API.props
@@ -266,3 +265,4 @@ D:\POS\Git_NONCSD_POS_API\Non CSD API - Chandan (Working)\NonCSDApplication\POS.
 D:\POS\Git_NONCSD_POS_API\Non CSD API - Chandan (Working)\NonCSDApplication\POS.API\obj\Debug\net7.0\POS.API.pdb
 D:\POS\Git_NONCSD_POS_API\Non CSD API - Chandan (Working)\NonCSDApplication\POS.API\obj\Debug\net7.0\POS.API.genruntimeconfig.cache
 D:\POS\Git_NONCSD_POS_API\Non CSD API - Chandan (Working)\NonCSDApplication\POS.API\obj\Debug\net7.0\ref\POS.API.dll
+D:\Projects-2023\Dot Net\NonCSDApi2023\POS.API\obj\Debug\net7.0\POS.API.MvcApplicationPartsAssemblyInfo.cs

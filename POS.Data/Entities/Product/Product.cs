@@ -1,4 +1,5 @@
-﻿using System;
+﻿using POS.Data.Dto;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
@@ -36,5 +37,6 @@ namespace POS.Data
         public Guid? WarehouseId { get; set; }
         [ForeignKey("WarehouseId")]
         public Warehouse Warehouse { get; set; }
+        public Cart Cart { get; set; }
     }
 }

@@ -2,6 +2,7 @@
 using MediatR;
 using System.Collections.Generic;
 using POS.Helper;
+using System;
 
 namespace POS.MediatR.CommandAndQuery
 {
@@ -17,7 +18,7 @@ namespace POS.MediatR.CommandAndQuery
         public string Address { get; set; }
         public bool IsImageUpdate { get; set; }
         public string ImgSrc { get; set; }
-        public int CounterId { get; set; }
+        public Guid CounterId { get; set; }
         public List<UserRoleDto> UserRoles { get; set; } = new List<UserRoleDto>();
 
     }

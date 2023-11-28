@@ -35,7 +35,7 @@ namespace POS.Repository
         public async Task<CartList> GetCartsData(CartResource cartResource)
         {
             var collectionBeforePaging =
-                All.ApplySort(cartResource.OrderBy,
+                AllIncluding(c => c.Product).ApplySort(cartResource.OrderBy,
                 _propertyMappingService.GetPropertyMapping<CartDto, Cart>()).Where(a => a.CustomerId == cartResource.CustomerId);
 
 

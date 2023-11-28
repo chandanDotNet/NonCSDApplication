@@ -7,5 +7,6 @@ namespace POS.Data
     {
         public Guid Id { get; set; }
         public string CounterName { get; set; }
+
     }
 }

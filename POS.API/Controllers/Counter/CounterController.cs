@@ -46,31 +46,37 @@ namespace POS.API.Controllers.Counter
         }
 
 
-        
-
-
-
-        
-
-
-        public class ResponseData1
+        /// <summary>
+        /// Get Counters.
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet("Counters")]
+        [Produces("application/json", "application/xml", Type = typeof(List<CounterDto>))]
+        public async Task<IActionResult> GetCounters()
         {
-            public bool status { get; set; }
-            public int StatusCode { get; set; }
-            public string message { get; set; }
-            public IList<ProductDto> Data { get; set; }
+            var getAllCounterCommand = new GetAllCounterCommand { };
+            var result = await _mediator.Send(getAllCounterCommand);
+            return Ok(result);
         }
 
 
-        //public ResponseData1 CustomReturnFormattedRespons(bool Status,int StatusCode,string Message)
-        //{
-        //    ResponseData1 responseData = new ResponseData1();
-        //    responseData.status = Status;
-        //    responseData.StatusCode = StatusCode;
-        //    responseData.message = Message;
+        /// <summary>
+        /// Get Counter.
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        [HttpGet("Counter/{id}", Name = "GetCounter")]
+        [Produces("application/json", "application/xml", Type = typeof(CounterDto))]
+        public async Task<IActionResult> GetCounter(Guid id)
+        {
+            var getCounterCommand = new GetCounterCommand { Id = id };
+            var result = await _mediator.Send(getCounterCommand);
+            return ReturnFormattedResponse(result);
+        }
 
-        //    return responseData;
-        //}
+
+
+
 
     }
 }

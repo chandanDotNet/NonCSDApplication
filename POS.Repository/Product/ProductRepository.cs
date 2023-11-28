@@ -37,7 +37,7 @@ namespace POS.Repository
         public async Task<ProductList> GetProducts(ProductResource productResource)
         {
             var collectionBeforePaging =
-                AllIncluding(c => c.Brand, cs => cs.ProductCategory, u => u.Unit, c => c.ProductTaxes).ApplySort(productResource.OrderBy,
+                AllIncluding(c => c.Brand, cs => cs.ProductCategory, u => u.Unit, c => c.ProductTaxes, (d => d.Cart)).ApplySort(productResource.OrderBy,
                 _propertyMappingService.GetPropertyMapping<ProductDto, Product>());
 
             if (!string.IsNullOrWhiteSpace(productResource.Name))
@@ -52,6 +52,13 @@ namespace POS.Repository
                 collectionBeforePaging = collectionBeforePaging
                     .Where(a => EF.Functions.Like(a.Name, $"{encodingName}%") || EF.Functions.Like(a.Barcode, $"{encodingName}%"));
             }
+
+            //if (productResource.CustomerId.HasValue)
+            //{
+            //    // trim & ignore casing
+            //    collectionBeforePaging = collectionBeforePaging
+            //       .Where(d => d.Cart.CustomerId == productResource.CustomerId);
+            //}
 
             if (!string.IsNullOrWhiteSpace(productResource.Barcode))
             {

@@ -174,7 +174,7 @@ namespace POS.Data.Entities
         public string message { get; set; }
         public string Data { get; set; }
     }
-}
+
 
 
     public class CustomerOrderDetailsResponseData
@@ -198,6 +198,21 @@ namespace POS.Data.Entities
         public decimal Discount { get; set; }
         public decimal Items { get; set; }
         public decimal DeliveryCharges { get; set; }
+    }
+
+    public class OrderNumberResponseData
+    {
+        public bool status { get; set; }
+        public int StatusCode { get; set; }
+        public string message { get; set; }
+        public string OrderNumber { get; set; }
+    }
+
+    public class SendEmailResponseData
+    {
+        public bool status { get; set; }
+        public int StatusCode { get; set; }
+        public string message { get; set; }       
     }
 
 }

@@ -34,18 +34,6 @@ D:\POS\Git_NONCSD_POS_API\API\POS.Helper\obj\Debug\net7.0\POS.Helper.dll
 D:\POS\Git_NONCSD_POS_API\API\POS.Helper\obj\Debug\net7.0\refint\POS.Helper.dll
 D:\POS\Git_NONCSD_POS_API\API\POS.Helper\obj\Debug\net7.0\POS.Helper.pdb
 D:\POS\Git_NONCSD_POS_API\API\POS.Helper\obj\Debug\net7.0\ref\POS.Helper.dll
-D:\Projects-2023\Dot Net\NonCSDApi2023\POS.Helper\bin\Debug\net7.0\POS.Helper.deps.json
-D:\Projects-2023\Dot Net\NonCSDApi2023\POS.Helper\bin\Debug\net7.0\POS.Helper.dll
-D:\Projects-2023\Dot Net\NonCSDApi2023\POS.Helper\bin\Debug\net7.0\POS.Helper.pdb
-D:\Projects-2023\Dot Net\NonCSDApi2023\POS.Helper\obj\Debug\net7.0\POS.Helper.csproj.AssemblyReference.cache
-D:\Projects-2023\Dot Net\NonCSDApi2023\POS.Helper\obj\Debug\net7.0\POS.Helper.GeneratedMSBuildEditorConfig.editorconfig
-D:\Projects-2023\Dot Net\NonCSDApi2023\POS.Helper\obj\Debug\net7.0\POS.Helper.AssemblyInfoInputs.cache
-D:\Projects-2023\Dot Net\NonCSDApi2023\POS.Helper\obj\Debug\net7.0\POS.Helper.AssemblyInfo.cs
-D:\Projects-2023\Dot Net\NonCSDApi2023\POS.Helper\obj\Debug\net7.0\POS.Helper.csproj.CoreCompileInputs.cache
-D:\Projects-2023\Dot Net\NonCSDApi2023\POS.Helper\obj\Debug\net7.0\POS.Helper.dll
-D:\Projects-2023\Dot Net\NonCSDApi2023\POS.Helper\obj\Debug\net7.0\refint\POS.Helper.dll
-D:\Projects-2023\Dot Net\NonCSDApi2023\POS.Helper\obj\Debug\net7.0\POS.Helper.pdb
-D:\Projects-2023\Dot Net\NonCSDApi2023\POS.Helper\obj\Debug\net7.0\ref\POS.Helper.dll
 D:\POS\Git_NONCSD_POS_API\Non CSD API - Chandan (Working)\NonCSDApplication\POS.Helper\bin\Debug\net7.0\POS.Helper.deps.json
 D:\POS\Git_NONCSD_POS_API\Non CSD API - Chandan (Working)\NonCSDApplication\POS.Helper\bin\Debug\net7.0\POS.Helper.dll
 D:\POS\Git_NONCSD_POS_API\Non CSD API - Chandan (Working)\NonCSDApplication\POS.Helper\bin\Debug\net7.0\POS.Helper.pdb
@@ -58,3 +46,15 @@ D:\POS\Git_NONCSD_POS_API\Non CSD API - Chandan (Working)\NonCSDApplication\POS.
 D:\POS\Git_NONCSD_POS_API\Non CSD API - Chandan (Working)\NonCSDApplication\POS.Helper\obj\Debug\net7.0\refint\POS.Helper.dll
 D:\POS\Git_NONCSD_POS_API\Non CSD API - Chandan (Working)\NonCSDApplication\POS.Helper\obj\Debug\net7.0\POS.Helper.pdb
 D:\POS\Git_NONCSD_POS_API\Non CSD API - Chandan (Working)\NonCSDApplication\POS.Helper\obj\Debug\net7.0\ref\POS.Helper.dll
+D:\Projects-2023\Dot Net\NonCSDApi2023\POS.Helper\bin\Debug\net7.0\POS.Helper.deps.json
+D:\Projects-2023\Dot Net\NonCSDApi2023\POS.Helper\bin\Debug\net7.0\POS.Helper.dll
+D:\Projects-2023\Dot Net\NonCSDApi2023\POS.Helper\bin\Debug\net7.0\POS.Helper.pdb
+D:\Projects-2023\Dot Net\NonCSDApi2023\POS.Helper\obj\Debug\net7.0\POS.Helper.csproj.AssemblyReference.cache
+D:\Projects-2023\Dot Net\NonCSDApi2023\POS.Helper\obj\Debug\net7.0\POS.Helper.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects-2023\Dot Net\NonCSDApi2023\POS.Helper\obj\Debug\net7.0\POS.Helper.AssemblyInfoInputs.cache
+D:\Projects-2023\Dot Net\NonCSDApi2023\POS.Helper\obj\Debug\net7.0\POS.Helper.AssemblyInfo.cs
+D:\Projects-2023\Dot Net\NonCSDApi2023\POS.Helper\obj\Debug\net7.0\POS.Helper.csproj.CoreCompileInputs.cache
+D:\Projects-2023\Dot Net\NonCSDApi2023\POS.Helper\obj\Debug\net7.0\POS.Helper.dll
+D:\Projects-2023\Dot Net\NonCSDApi2023\POS.Helper\obj\Debug\net7.0\refint\POS.Helper.dll
+D:\Projects-2023\Dot Net\NonCSDApi2023\POS.Helper\obj\Debug\net7.0\POS.Helper.pdb
+D:\Projects-2023\Dot Net\NonCSDApi2023\POS.Helper\obj\Debug\net7.0\ref\POS.Helper.dll

@@ -19,5 +19,6 @@ namespace POS.Data.Resources
         public Guid? CategoryId { get; set; }
         public Guid? BrandId { get; set; }
         public Guid? WarehouseId { get; set; }
+        public Guid? CustomerId { get; set; }
     }
 }

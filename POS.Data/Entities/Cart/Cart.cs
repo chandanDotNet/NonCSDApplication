@@ -21,6 +21,7 @@ namespace POS.Data
         public decimal TaxValue { get; set; }
         public decimal Discount { get; set; }
         public decimal DiscountPercentage { get; set; }
+        public Product Product { get; set; }
 
     }
 }

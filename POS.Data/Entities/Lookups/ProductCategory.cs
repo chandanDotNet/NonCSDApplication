@@ -10,6 +10,7 @@ namespace POS.Data
         public string Name { get; set; }
         public Guid? ParentId { get; set; }
         public string Description { get; set; }
+        public string ProductCategoryUrl { get; set; }
         [ForeignKey("ParentId")]
         public ProductCategory ParentCategory { get; set; }
     }

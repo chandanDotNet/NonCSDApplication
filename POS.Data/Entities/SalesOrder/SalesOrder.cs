@@ -1,4 +1,5 @@
-﻿using System;
+﻿using POS.Data.Dto;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -24,9 +25,12 @@ namespace POS.Data
         public decimal TotalDiscount { get; set; }
         public decimal TotalPaidAmount { get; set; }
         public decimal DeliveryCharges { get; set; }
+        public Guid DeliveryAddressId { get; set; }
+        public string DeliveryAddress { get; set; }
         public PaymentStatus PaymentStatus { get; set; }
         public List<SalesOrderItem> SalesOrderItems { get; set; }
         public List<SalesOrderPayment> SalesOrderPayments { get; set; }
+        public List<CustomerAddress> DeliveryAddresses { get; set; }
 
     }
 }

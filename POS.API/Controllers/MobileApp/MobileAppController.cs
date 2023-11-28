@@ -29,6 +29,7 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Text;
 using POS.MediatR.Reminder.Commands;
 using POS.MediatR.SalesOrder.Commands;
+using POS.MediatR.Cart.Commands;
 
 namespace POS.API.Controllers.MobileApp
 {
@@ -1019,7 +1020,7 @@ namespace POS.API.Controllers.MobileApp
             {
                 response.status = false;
                 response.StatusCode = 0;
-                response.message = "Invalid";
+                response.message = "Invalid - " + result.Errors.First();
                 response.Data = new SalesOrderDto { };
             }
 
@@ -1040,6 +1041,10 @@ namespace POS.API.Controllers.MobileApp
             var result = await _mediator.Send(addCustomerSalesOrderCommand);
             if (result.Success)
             {
+                var command = new DeleteCartByCustomerCommand { CustomerId = addCustomerSalesOrderCommand.CustomerId };
+                var result2 = await _mediator.Send(command);
+
+
                 response.status = true;
                 response.StatusCode = 1;
                 response.message = "Success";
@@ -1048,7 +1053,7 @@ namespace POS.API.Controllers.MobileApp
             {
                 response.status = false;
                 response.StatusCode = 0;
-                response.message = "Invalid";
+                response.message = "Invalid - " + result.Errors.First();
             }
             return Ok(response);
         }
@@ -1109,9 +1114,9 @@ namespace POS.API.Controllers.MobileApp
         /// </summary>
         /// <param name="UpdateSalesOrderReturnCommand">The update customer Sales order command.</param>
         /// <returns></returns>
-        [HttpPut("CustomerSalesOrderReturn/{id}")]
+        [HttpPut("CustomerSalesOrderReturn")]
         [Produces("application/json", "application/xml")]
-        public async Task<IActionResult> UpdateCustomerSalesOrderReturn(Guid id, UpdateSalesOrderReturnCommand updateSalesOrderReturnCommand)
+        public async Task<IActionResult> UpdateCustomerSalesOrderReturn(UpdateSalesOrderReturnCommand updateSalesOrderReturnCommand)
         {
             IUDResponseData response = new IUDResponseData();
             var result = await _mediator.Send(updateSalesOrderReturnCommand);
@@ -1125,7 +1130,7 @@ namespace POS.API.Controllers.MobileApp
             {
                 response.status = false;
                 response.StatusCode = 0;
-                response.message = "Invalid";
+                response.message = "Invalid - " + result.Errors.First();
             }
             return Ok(response);
         }
@@ -1158,7 +1163,7 @@ namespace POS.API.Controllers.MobileApp
                         Discount = result.Sum(x => x.Discount),
                         DeliveryCharges = 0,
                         Items = result.Sum(x => x.Quantity),
-                    };                    
+                    };
 
                     response.status = true;
                     response.StatusCode = 1;
@@ -1196,5 +1201,62 @@ namespace POS.API.Controllers.MobileApp
             response.Data = "Logout Successfully";
             return Ok(response);
         }
+
+
+        /// <summary>
+        /// Gets the new Sales order number.
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet("GetNewOrderNumber")]
+        public async Task<IActionResult> GetNewSalesOrderNumber()
+        {
+            OrderNumberResponseData response = new OrderNumberResponseData();
+            var getNewSalesOrderNumberQuery = new GetNewSalesOrderNumberCommand { };
+            var result = await _mediator.Send(getNewSalesOrderNumberQuery);
+            if (result != null)
+            {
+                response.status = true;
+                response.StatusCode = 1;
+                response.message = "Success";
+                response.OrderNumber = result;
+            }
+            else
+            {
+                response.status = false;
+                response.StatusCode = 0;
+                response.message = "Invalid";
+               
+            }
+            return Ok(response);
+        }
+
+
+        /// <summary>
+        /// Send mail.
+        /// </summary>
+        /// <param name="sendEmailCommand"></param>
+        /// <returns></returns>
+        [HttpPost("SendAllEmail")]        
+        [Produces("application/json", "application/xml", Type = typeof(void))]
+        public async Task<IActionResult> SendAllEmail(SendEmailCommand sendEmailCommand)
+        {
+            SendEmailResponseData response = new SendEmailResponseData();
+            var result = await _mediator.Send(sendEmailCommand);
+            if (result.Success)
+            {
+                response.status = true;
+                response.StatusCode = 1;
+                response.message = "Success";                
+            }
+            else
+            {
+                response.status = false;
+                response.StatusCode = 0;
+                response.message = "Invalid - " + result.Errors.First();
+            }
+            return Ok(response);
+
+        }
+
     }
 }
