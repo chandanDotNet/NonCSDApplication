@@ -21,6 +21,7 @@ namespace POS.Data
         public DateTime? DeletedDate { get; set; }
         public Guid? DeletedBy { get; set; }
         public Guid? CounterId { get; set; }
+        public Counter Counter { get; set; }
         public virtual ICollection<UserClaim> UserClaims { get; set; }
         public virtual ICollection<UserLogin> UserLogins { get; set; }
         public virtual ICollection<UserToken> UserTokens { get; set; }

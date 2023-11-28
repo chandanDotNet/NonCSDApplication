@@ -79,7 +79,10 @@ namespace POS.Repository
                     Discount=0,
                     ProductTaxes = _mapper.Map<List<ProductTaxDto>>(c.ProductTaxes),
                     Unit=_mapper.Map<UnitConversationDto>(c.Unit),
-                    ProductUrl = !string.IsNullOrWhiteSpace(c.ProductUrl) ? Path.Combine(_pathHelper.ProductThumbnailImagePath, c.ProductUrl) : ""
+                    ProductUrl = !string.IsNullOrWhiteSpace(c.ProductUrl) ? Path.Combine(_pathHelper.ProductThumbnailImagePath, c.ProductUrl) : "",
+                    // Cart= _mapper.Map<CartDto>(c.Cart),
+                   
+
                 }).ToListAsync();
             return entities;
         }

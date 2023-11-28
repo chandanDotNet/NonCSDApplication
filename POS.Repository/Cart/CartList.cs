@@ -4,6 +4,7 @@ using POS.Data;
 using POS.Data.Dto;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -71,7 +72,8 @@ namespace POS.Repository
                     UnitName = c.UnitName,
                     UnitPrice = c.UnitPrice,
                     Quantity = c.Quantity,
-                    Total = c.Total
+                    Total = c.Total,
+                    Product = _mapper.Map<ProductDto>(c.Product)
                 })
                 .ToListAsync();
             return entities;

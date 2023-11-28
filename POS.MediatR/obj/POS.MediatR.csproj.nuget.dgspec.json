@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\POS\\Git_NONCSD_POS_API\\Non CSD API - Chandan (Working)\\Non CSD\\NonCSDApplication\\POS.MediatR\\POS.MediatR.csproj": {}
+    "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.MediatR\\POS.MediatR.csproj": {}
   },
   "projects": {
-    "D:\\POS\\Git_NONCSD_POS_API\\Non CSD API - Chandan (Working)\\Non CSD\\NonCSDApplication\\POS.Common\\POS.Common.csproj": {
+    "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.Common\\POS.Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\POS\\Git_NONCSD_POS_API\\Non CSD API - Chandan (Working)\\Non CSD\\NonCSDApplication\\POS.Common\\POS.Common.csproj",
+        "projectUniqueName": "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.Common\\POS.Common.csproj",
         "projectName": "POS.Common",
-        "projectPath": "D:\\POS\\Git_NONCSD_POS_API\\Non CSD API - Chandan (Working)\\Non CSD\\NonCSDApplication\\POS.Common\\POS.Common.csproj",
-        "packagesPath": "C:\\Users\\siddiqui.rahil\\.nuget\\packages\\",
-        "outputPath": "D:\\POS\\Git_NONCSD_POS_API\\Non CSD API - Chandan (Working)\\Non CSD\\NonCSDApplication\\POS.Common\\obj\\",
+        "projectPath": "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.Common\\POS.Common.csproj",
+        "packagesPath": "C:\\Users\\chandan.mandal\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.Common\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\siddiqui.rahil\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\chandan.mandal\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,14 +26,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "D:\\POS\\Git_NONCSD_POS_API\\Non CSD API - Chandan (Working)\\Non CSD\\NonCSDApplication\\POS.Data\\POS.Data.csproj": {
-                "projectPath": "D:\\POS\\Git_NONCSD_POS_API\\Non CSD API - Chandan (Working)\\Non CSD\\NonCSDApplication\\POS.Data\\POS.Data.csproj"
+              "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.Data\\POS.Data.csproj": {
+                "projectPath": "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.Data\\POS.Data.csproj"
               }
             }
           }
@@ -65,21 +70,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.311\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\POS\\Git_NONCSD_POS_API\\Non CSD API - Chandan (Working)\\Non CSD\\NonCSDApplication\\POS.Data\\POS.Data.csproj": {
+    "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.Data\\POS.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\POS\\Git_NONCSD_POS_API\\Non CSD API - Chandan (Working)\\Non CSD\\NonCSDApplication\\POS.Data\\POS.Data.csproj",
+        "projectUniqueName": "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.Data\\POS.Data.csproj",
         "projectName": "POS.Data",
-        "projectPath": "D:\\POS\\Git_NONCSD_POS_API\\Non CSD API - Chandan (Working)\\Non CSD\\NonCSDApplication\\POS.Data\\POS.Data.csproj",
-        "packagesPath": "C:\\Users\\siddiqui.rahil\\.nuget\\packages\\",
-        "outputPath": "D:\\POS\\Git_NONCSD_POS_API\\Non CSD API - Chandan (Working)\\Non CSD\\NonCSDApplication\\POS.Data\\obj\\",
+        "projectPath": "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.Data\\POS.Data.csproj",
+        "packagesPath": "C:\\Users\\chandan.mandal\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.Data\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\siddiqui.rahil\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\chandan.mandal\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -87,14 +96,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "D:\\POS\\Git_NONCSD_POS_API\\Non CSD API - Chandan (Working)\\Non CSD\\NonCSDApplication\\POS.Helper\\POS.Helper.csproj": {
-                "projectPath": "D:\\POS\\Git_NONCSD_POS_API\\Non CSD API - Chandan (Working)\\Non CSD\\NonCSDApplication\\POS.Helper\\POS.Helper.csproj"
+              "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.Helper\\POS.Helper.csproj": {
+                "projectPath": "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.Helper\\POS.Helper.csproj"
               }
             }
           }
@@ -130,21 +140,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.311\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\POS\\Git_NONCSD_POS_API\\Non CSD API - Chandan (Working)\\Non CSD\\NonCSDApplication\\POS.Domain\\POS.Domain.csproj": {
+    "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.Domain\\POS.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\POS\\Git_NONCSD_POS_API\\Non CSD API - Chandan (Working)\\Non CSD\\NonCSDApplication\\POS.Domain\\POS.Domain.csproj",
+        "projectUniqueName": "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.Domain\\POS.Domain.csproj",
         "projectName": "POS.Domain",
-        "projectPath": "D:\\POS\\Git_NONCSD_POS_API\\Non CSD API - Chandan (Working)\\Non CSD\\NonCSDApplication\\POS.Domain\\POS.Domain.csproj",
-        "packagesPath": "C:\\Users\\siddiqui.rahil\\.nuget\\packages\\",
-        "outputPath": "D:\\POS\\Git_NONCSD_POS_API\\Non CSD API - Chandan (Working)\\Non CSD\\NonCSDApplication\\POS.Domain\\obj\\",
+        "projectPath": "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.Domain\\POS.Domain.csproj",
+        "packagesPath": "C:\\Users\\chandan.mandal\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.Domain\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\siddiqui.rahil\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\chandan.mandal\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -152,14 +166,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "D:\\POS\\Git_NONCSD_POS_API\\Non CSD API - Chandan (Working)\\Non CSD\\NonCSDApplication\\POS.Data\\POS.Data.csproj": {
-                "projectPath": "D:\\POS\\Git_NONCSD_POS_API\\Non CSD API - Chandan (Working)\\Non CSD\\NonCSDApplication\\POS.Data\\POS.Data.csproj"
+              "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.Data\\POS.Data.csproj": {
+                "projectPath": "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.Data\\POS.Data.csproj"
               }
             }
           }
@@ -207,21 +222,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.311\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\POS\\Git_NONCSD_POS_API\\Non CSD API - Chandan (Working)\\Non CSD\\NonCSDApplication\\POS.Helper\\POS.Helper.csproj": {
+    "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.Helper\\POS.Helper.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\POS\\Git_NONCSD_POS_API\\Non CSD API - Chandan (Working)\\Non CSD\\NonCSDApplication\\POS.Helper\\POS.Helper.csproj",
+        "projectUniqueName": "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.Helper\\POS.Helper.csproj",
         "projectName": "POS.Helper",
-        "projectPath": "D:\\POS\\Git_NONCSD_POS_API\\Non CSD API - Chandan (Working)\\Non CSD\\NonCSDApplication\\POS.Helper\\POS.Helper.csproj",
-        "packagesPath": "C:\\Users\\siddiqui.rahil\\.nuget\\packages\\",
-        "outputPath": "D:\\POS\\Git_NONCSD_POS_API\\Non CSD API - Chandan (Working)\\Non CSD\\NonCSDApplication\\POS.Helper\\obj\\",
+        "projectPath": "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.Helper\\POS.Helper.csproj",
+        "packagesPath": "C:\\Users\\chandan.mandal\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.Helper\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\siddiqui.rahil\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\chandan.mandal\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -229,6 +248,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -279,21 +299,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.311\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\POS\\Git_NONCSD_POS_API\\Non CSD API - Chandan (Working)\\Non CSD\\NonCSDApplication\\POS.MediatR\\POS.MediatR.csproj": {
+    "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.MediatR\\POS.MediatR.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\POS\\Git_NONCSD_POS_API\\Non CSD API - Chandan (Working)\\Non CSD\\NonCSDApplication\\POS.MediatR\\POS.MediatR.csproj",
+        "projectUniqueName": "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.MediatR\\POS.MediatR.csproj",
         "projectName": "POS.MediatR",
-        "projectPath": "D:\\POS\\Git_NONCSD_POS_API\\Non CSD API - Chandan (Working)\\Non CSD\\NonCSDApplication\\POS.MediatR\\POS.MediatR.csproj",
-        "packagesPath": "C:\\Users\\siddiqui.rahil\\.nuget\\packages\\",
-        "outputPath": "D:\\POS\\Git_NONCSD_POS_API\\Non CSD API - Chandan (Working)\\Non CSD\\NonCSDApplication\\POS.MediatR\\obj\\",
+        "projectPath": "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.MediatR\\POS.MediatR.csproj",
+        "packagesPath": "C:\\Users\\chandan.mandal\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.MediatR\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\siddiqui.rahil\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\chandan.mandal\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -301,26 +325,27 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "D:\\POS\\Git_NONCSD_POS_API\\Non CSD API - Chandan (Working)\\Non CSD\\NonCSDApplication\\POS.Common\\POS.Common.csproj": {
-                "projectPath": "D:\\POS\\Git_NONCSD_POS_API\\Non CSD API - Chandan (Working)\\Non CSD\\NonCSDApplication\\POS.Common\\POS.Common.csproj"
+              "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.Common\\POS.Common.csproj": {
+                "projectPath": "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.Common\\POS.Common.csproj"
               },
-              "D:\\POS\\Git_NONCSD_POS_API\\Non CSD API - Chandan (Working)\\Non CSD\\NonCSDApplication\\POS.Data\\POS.Data.csproj": {
-                "projectPath": "D:\\POS\\Git_NONCSD_POS_API\\Non CSD API - Chandan (Working)\\Non CSD\\NonCSDApplication\\POS.Data\\POS.Data.csproj"
+              "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.Data\\POS.Data.csproj": {
+                "projectPath": "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.Data\\POS.Data.csproj"
               },
-              "D:\\POS\\Git_NONCSD_POS_API\\Non CSD API - Chandan (Working)\\Non CSD\\NonCSDApplication\\POS.Domain\\POS.Domain.csproj": {
-                "projectPath": "D:\\POS\\Git_NONCSD_POS_API\\Non CSD API - Chandan (Working)\\Non CSD\\NonCSDApplication\\POS.Domain\\POS.Domain.csproj"
+              "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.Domain\\POS.Domain.csproj": {
+                "projectPath": "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.Domain\\POS.Domain.csproj"
               },
-              "D:\\POS\\Git_NONCSD_POS_API\\Non CSD API - Chandan (Working)\\Non CSD\\NonCSDApplication\\POS.Helper\\POS.Helper.csproj": {
-                "projectPath": "D:\\POS\\Git_NONCSD_POS_API\\Non CSD API - Chandan (Working)\\Non CSD\\NonCSDApplication\\POS.Helper\\POS.Helper.csproj"
+              "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.Helper\\POS.Helper.csproj": {
+                "projectPath": "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.Helper\\POS.Helper.csproj"
               },
-              "D:\\POS\\Git_NONCSD_POS_API\\Non CSD API - Chandan (Working)\\Non CSD\\NonCSDApplication\\POS.Repository\\POS.Repository.csproj": {
-                "projectPath": "D:\\POS\\Git_NONCSD_POS_API\\Non CSD API - Chandan (Working)\\Non CSD\\NonCSDApplication\\POS.Repository\\POS.Repository.csproj"
+              "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.Repository\\POS.Repository.csproj": {
+                "projectPath": "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.Repository\\POS.Repository.csproj"
               }
             }
           }
@@ -375,21 +400,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.311\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\POS\\Git_NONCSD_POS_API\\Non CSD API - Chandan (Working)\\Non CSD\\NonCSDApplication\\POS.Repository\\POS.Repository.csproj": {
+    "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.Repository\\POS.Repository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\POS\\Git_NONCSD_POS_API\\Non CSD API - Chandan (Working)\\Non CSD\\NonCSDApplication\\POS.Repository\\POS.Repository.csproj",
+        "projectUniqueName": "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.Repository\\POS.Repository.csproj",
         "projectName": "POS.Repository",
-        "projectPath": "D:\\POS\\Git_NONCSD_POS_API\\Non CSD API - Chandan (Working)\\Non CSD\\NonCSDApplication\\POS.Repository\\POS.Repository.csproj",
-        "packagesPath": "C:\\Users\\siddiqui.rahil\\.nuget\\packages\\",
-        "outputPath": "D:\\POS\\Git_NONCSD_POS_API\\Non CSD API - Chandan (Working)\\Non CSD\\NonCSDApplication\\POS.Repository\\obj\\",
+        "projectPath": "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.Repository\\POS.Repository.csproj",
+        "packagesPath": "C:\\Users\\chandan.mandal\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.Repository\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\siddiqui.rahil\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\chandan.mandal\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -397,23 +426,24 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "D:\\POS\\Git_NONCSD_POS_API\\Non CSD API - Chandan (Working)\\Non CSD\\NonCSDApplication\\POS.Common\\POS.Common.csproj": {
-                "projectPath": "D:\\POS\\Git_NONCSD_POS_API\\Non CSD API - Chandan (Working)\\Non CSD\\NonCSDApplication\\POS.Common\\POS.Common.csproj"
+              "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.Common\\POS.Common.csproj": {
+                "projectPath": "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.Common\\POS.Common.csproj"
               },
-              "D:\\POS\\Git_NONCSD_POS_API\\Non CSD API - Chandan (Working)\\Non CSD\\NonCSDApplication\\POS.Data\\POS.Data.csproj": {
-                "projectPath": "D:\\POS\\Git_NONCSD_POS_API\\Non CSD API - Chandan (Working)\\Non CSD\\NonCSDApplication\\POS.Data\\POS.Data.csproj"
+              "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.Data\\POS.Data.csproj": {
+                "projectPath": "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.Data\\POS.Data.csproj"
               },
-              "D:\\POS\\Git_NONCSD_POS_API\\Non CSD API - Chandan (Working)\\Non CSD\\NonCSDApplication\\POS.Domain\\POS.Domain.csproj": {
-                "projectPath": "D:\\POS\\Git_NONCSD_POS_API\\Non CSD API - Chandan (Working)\\Non CSD\\NonCSDApplication\\POS.Domain\\POS.Domain.csproj"
+              "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.Domain\\POS.Domain.csproj": {
+                "projectPath": "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.Domain\\POS.Domain.csproj"
               },
-              "D:\\POS\\Git_NONCSD_POS_API\\Non CSD API - Chandan (Working)\\Non CSD\\NonCSDApplication\\POS.Helper\\POS.Helper.csproj": {
-                "projectPath": "D:\\POS\\Git_NONCSD_POS_API\\Non CSD API - Chandan (Working)\\Non CSD\\NonCSDApplication\\POS.Helper\\POS.Helper.csproj"
+              "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.Helper\\POS.Helper.csproj": {
+                "projectPath": "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.Helper\\POS.Helper.csproj"
               }
             }
           }
@@ -457,7 +487,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.311\\RuntimeIdentifierGraph.json"
         }
       }
     }

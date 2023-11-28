@@ -38,6 +38,7 @@ namespace POS.MediatR.Handlers
                     .ThenInclude(c => c.Product)
                 .Include(c => c.SalesOrderItems)
                     .ThenInclude(c => c.UnitConversation)
+                //.Include(c => c.DeliveryAddress)
                 .Where(c => c.Id == request.Id)
                 .FirstOrDefaultAsync();
             if (entity == null)
