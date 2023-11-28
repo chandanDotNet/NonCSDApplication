@@ -168,7 +168,6 @@
             </summary>
             <returns></returns>
         </member>
-<<<<<<< HEAD
         <member name="M:POS.API.Controllers.Counter.CounterController.GetCounter(System.Guid)">
             <summary>
             Get Counter.
@@ -176,8 +175,6 @@
             <param name="id"></param>
             <returns></returns>
         </member>
-=======
->>>>>>> 94fa1873edb566a9fe38b01aee278f9c626a7f8f
         <member name="M:POS.API.Controllers.Country.CountryController.GetCountry(System.Guid)">
             <summary>
             Get Country.
@@ -1011,11 +1008,7 @@
             </summary>
             <returns></returns>
         </member>
-<<<<<<< HEAD
         <member name="M:POS.API.Controllers.MobileApp.MobileAppController.UpdateCustomerSalesOrderReturn(POS.MediatR.SalesOrder.Commands.UpdateSalesOrderReturnCommand)">
-=======
-        <member name="M:POS.API.Controllers.MobileApp.MobileAppController.UpdateCustomerSalesOrderReturn(System.Guid,POS.MediatR.SalesOrder.Commands.UpdateSalesOrderReturnCommand)">
->>>>>>> 94fa1873edb566a9fe38b01aee278f9c626a7f8f
             <summary>
             Update the Customer Sales order return.
             </summary>
@@ -1029,12 +1022,6 @@
             <param name="cartResource"></param>
             <returns></returns>
         </member>
-<<<<<<< HEAD
-        <member name="M:POS.API.Controllers.MobileApp.MobileAppController.Logout(System.String)">
-            <summary>
-            Logout.
-            </summary>
-        </member>
         <member name="M:POS.API.Controllers.MobileApp.MobileAppController.GetNewSalesOrderNumber">
             <summary>
             Gets the new Sales order number.
@@ -1046,7 +1033,8 @@
             Send mail.
             </summary>
             <param name="sendEmailCommand"></param>
-=======
+            <returns></returns>
+        </member>
         <member name="M:POS.API.Controllers.MobileApp.MobileAppController.AddBanner(POS.MediatR.Banner.Command.AddBannerCommand)">
             <summary>
             Add Banner.
@@ -1071,7 +1059,6 @@
             <summary>
             Get Login Page Banners.
             </summary>
->>>>>>> 94fa1873edb566a9fe38b01aee278f9c626a7f8f
             <returns></returns>
         </member>
         <member name="M:POS.API.Controllers.NewsletterSubscriber.NewsletterSubscriberController.CreateNewsletterSubscriber(POS.MediatR.CommandAndQuery.AddNewsletterSubscriberCommand)">
