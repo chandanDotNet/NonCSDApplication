@@ -54,7 +54,7 @@ namespace POS.Repository
                     Id = c.Id,
                     CustomerName = c.CustomerName,
                     Email = c.Email,
-                    ContactPerson = c.ContactPerson,
+                    //ContactPerson = c.ContactPerson,
                     MobileNo = c.MobileNo,
                     Website = c.Website,
                     IsWalkIn = c.IsWalkIn,

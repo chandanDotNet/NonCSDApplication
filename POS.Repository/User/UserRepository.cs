@@ -133,6 +133,7 @@ namespace POS.Repository
                           SecurityAlgorithms.HmacSha256)
             );
             // Create a string representation of the Jwt token
+            var retToken = new JwtSecurityTokenHandler().WriteToken(token);
             return new JwtSecurityTokenHandler().WriteToken(token); 
         }
     }

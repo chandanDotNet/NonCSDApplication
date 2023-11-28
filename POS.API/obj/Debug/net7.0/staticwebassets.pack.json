@@ -1,7 +1,19 @@
 {
   "Files": [
     {
-      "Id": "D:\\Projects-2023\\Dot Net\\NonCSDApi2023\\POS.API\\wwwroot\\Users\\no-image-found.png",
+      "Id": "D:\\POS\\Git_NONCSD_POS_API\\Non CSD API - Chandan (Working)\\Non CSD\\NonCSDApplication\\POS.API\\wwwroot\\BannerImages\\6ed832e5-409c-464b-b2a8-fcb5d4c7b9e3.png",
+      "PackagePath": "staticwebassets\\BannerImages\\6ed832e5-409c-464b-b2a8-fcb5d4c7b9e3.png"
+    },
+    {
+      "Id": "D:\\POS\\Git_NONCSD_POS_API\\Non CSD API - Chandan (Working)\\Non CSD\\NonCSDApplication\\POS.API\\wwwroot\\BannerImages\\a55c55b3-490c-41df-a3a4-fb2377605239.png",
+      "PackagePath": "staticwebassets\\BannerImages\\a55c55b3-490c-41df-a3a4-fb2377605239.png"
+    },
+    {
+      "Id": "D:\\POS\\Git_NONCSD_POS_API\\Non CSD API - Chandan (Working)\\Non CSD\\NonCSDApplication\\POS.API\\wwwroot\\LoginPageBannerImages\\3d3b13e3-1b80-4a22-b98a-ea83a82e7dbd.png",
+      "PackagePath": "staticwebassets\\LoginPageBannerImages\\3d3b13e3-1b80-4a22-b98a-ea83a82e7dbd.png"
+    },
+    {
+      "Id": "D:\\POS\\Git_NONCSD_POS_API\\Non CSD API - Chandan (Working)\\Non CSD\\NonCSDApplication\\POS.API\\wwwroot\\Users\\no-image-found.png",
       "PackagePath": "staticwebassets\\Users\\no-image-found.png"
     },
     {

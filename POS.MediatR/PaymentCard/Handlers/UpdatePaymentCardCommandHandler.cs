@@ -65,7 +65,7 @@ namespace POS.MediatR.PaymentCard.Handlers
             //remove other as Primary Card
             if (entityExist.IsPrimary)
             {
-                var defaultPrimaryCardPSettings = await _paymentCardRepository.All.Where(c => c.CustomerId == request.CustomerId && c.IsPrimary).ToListAsync();
+                var defaultPrimaryCardPSettings = await _paymentCardRepository.All.Where(c => c.CustomerId == request.CustomerId && c.Id != request.Id && c.IsPrimary).ToListAsync();
                 defaultPrimaryCardPSettings.ForEach(c => c.IsPrimary = false);
                 _paymentCardRepository.UpdateRange(defaultPrimaryCardPSettings);
             }
